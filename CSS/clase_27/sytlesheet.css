@@ -1,0 +1,285 @@
+h1 {
+    text-align: center;
+}
+
+.index h1 {
+    font-size: xxx-large;
+}
+
+.index ul {
+    font-size: xx-large;
+    margin-left: 20px;
+}
+
+.index a, .index li {
+    padding: 10px 0px;
+}
+
+.index a:hover {
+    background-color: rgb(195, 195, 195);
+    color: rgb(0, 0, 0);
+}
+
+footer {
+    margin: 20px 0px;
+}
+
+footer a {
+    font-size: xx-large;
+    padding: 10px;
+    background-color: gainsboro;
+    border: 2px solid black;
+    font-weight: bold;
+    float: right;
+}
+
+footer a:hover {
+    background-color: gray;
+    color: black;
+}
+
+
+/*---------Ejercicio 1---------*/
+
+table.table1 {
+    border: 1px solid rgb(229, 229, 229);
+    width: 900px;
+    text-align: center;
+    margin: auto;
+    border-spacing: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.table1 th, .table1 td {
+    padding: 15px;
+}
+
+.table1 th {
+    background-color: black;
+    color: white;
+}
+
+.table1 tr:nth-child(odd) {
+    background-color: rgb(229, 229, 229);
+}
+
+/*---------Ejercicio 2---------*/
+
+table.table2 {
+    width: 600px;
+    text-align: center;
+    margin: auto;
+    border-spacing: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    border-bottom: #43967B 3px solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    overflow: hidden;
+}
+
+.table2 th, .table2 td {
+    padding: 15px;
+}
+
+.table2 th {
+    background-color: #43967B;
+    color: white;
+}
+
+.table2 tr:nth-child(even) {
+    background-color: rgb(238, 237, 237);
+    color: #43967B;
+    font-weight: bold;
+}
+
+
+/*---------Ejercicio 3---------*/
+
+
+table.table3 {
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    border-spacing: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    border: 1px solid black;
+    font-weight: bold;
+
+}
+
+.table3 th, .table3 td {
+    padding: 15px;
+}
+
+.table3 thead th {
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+
+.table3 tr:nth-child(even) {
+    background-color: rgb(238, 237, 237);
+}
+
+.table3 tbody tr:nth-of-type(2n+1) th {
+    background-color: #3F65C5;
+    color: white;
+    text-align: left;
+}
+
+.table3 tbody tr:nth-of-type(2n) th {
+    background-color: #2F54C5;
+    color: white;
+    text-align: left;
+}
+
+.table3 tbody tr:nth-of-type(3) td:nth-of-type(2) {
+    background-color: #F9D949;
+}
+
+
+/*---------Ejercicio 4---------*/
+
+
+table.table4 {
+    width: 900px;
+    text-align: center;
+    margin: auto;
+    border-spacing: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.table4 th, .table4 td {
+    padding: 30px;
+}
+
+
+
+.table4 tbody tr:nth-child(odd) {
+    background-color: rgb(238, 237, 237);
+}
+
+.table4 a {
+    text-decoration: none;
+}
+
+.table4 a.progress {
+    border: 1px solid green;
+    padding: 10px 20px;
+    background-color: #43967B;
+    color: white;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.table4 a.open {
+    border: 1px solid rgb(230, 191, 63);
+    padding: 10px 20px;
+    background-color: rgb(230, 191, 63);
+    color: black;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.table4 a.on_hold {
+    border: 1px solid rgb(187, 70, 70);
+    padding: 10px 20px;
+    background-color: rgb(187, 70, 70);
+    color: white;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.table4 a:hover {
+    background-color: rgb(0,0,0,0.5);
+}
+
+
+/*---------Ejercicio 5---------*/
+
+
+table.table5 {
+    min-width: 900px;
+    text-align: left;
+    margin: auto;
+    border-spacing: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 50px solid #19191D;
+}
+
+.table5 th, .table5 td {
+    border-top: 5px solid #19191D;
+}
+
+.table5 th, .table5 td {
+    padding: 30px;
+}
+
+.table5 thead {
+    background-color: #19191D;
+    color: white;
+}
+
+.table5 tbody {
+    background-color: #25252A;
+    color: rgb(175, 175, 175);
+}
+
+.table5 span {
+    font-size: 18px;
+    margin: 0;
+    color: #707070;
+}
+
+.table5 tbody th {
+    color: #707070;
+}
+
+.table5 tbody td:nth-of-type(3) {
+    color: #707070;
+}
+
+.table5 tbody td:nth-of-type(4) {
+    color: #707070;
+}
+
+/*---------Ejercicio 6---------*/
+
+
+table.table6 {
+    min-width: 900px;
+    text-align: center;
+    margin: auto;
+    border-spacing: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.table6 caption {
+    font-size: x-large;
+    background-color: #e3e3e3;
+    padding: 10px;
+}
+
+.table6 thead {
+    background-color: #5F13EF;
+    color: white;
+}
+
+.table6 th, .table6 td {
+    padding: 40px;
+    border: 0.1px solid rgb(229, 229, 229);
+}
+
+.table6 tbody th {
+    background-color: rgb(238, 237, 237);
+}
+
+.table6 tbody td:nth-of-type(2n) {
+    background-color: rgb(238, 237, 237);
+}
+
+.table6 a {
+    text-decoration: none;
+}
+

@@ -51,7 +51,10 @@ footer a:hover {
     background-image: url(topography.svg),
     linear-gradient(to right, #DA4E72, #7949C3);
     padding: 10px;
+    max-width: 1000px;
+    margin: auto;
 }
+
 
 [class^="box-"] {
     display: flex;
