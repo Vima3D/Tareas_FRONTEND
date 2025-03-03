@@ -48,3 +48,18 @@ body {
     color: #CC6600;
 }
 
+
+/*--------Index Button--------*/
+.index_button {
+    font-size: large;
+    padding: 10px 30px;
+    background-color: gainsboro;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.index_button:hover {
+    background-color: gray;
+    color: black;
+}
+/*--------------------------*/

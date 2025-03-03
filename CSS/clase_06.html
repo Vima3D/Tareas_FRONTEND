@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>06</title>
+    <title>Clase 06 CSS</title>
+    <link rel="stylesheet" href="../sytlesheet.css">
 </head>
 <style>
   /* '>' selecciona únicamente a los hijos directos */
@@ -62,8 +63,65 @@
 
 <body>
   
-  <h1><a href="">Web</a> para tarea de selectores</h1>
+  <a class="index_button" href="../index.html">Index</a>
+  <h1>Tarea 1 de selectores</h1>
+
+  <section>
+    <h2>CSS:</h3>
+    <pre>
+      div > div{
+        color: red;
+      }
+    
+      p > *{
+        color: blue;
+      }
+    
+      article p{
+        color: blue;
+      }
+    
+      h1, h3 {
+        color: purple;
+      }
+    
+      /*
+      h2 {
+        color: red;
+      }
+      */
+    
+      body ol {
+        color: red;
+      }
+    
+      .amarillo {
+        color: yellow;
+      }
+    
+      body > ul {
+        color: greenyellow;
+      }
+    
+      p > a {
+        color: blueviolet;
+      }
+    
+      #platano {
+        color: green;
+      }
+    
+      ul p.paisa {
+        color: yellowgreen;
+      }
+    
+      h1.hedertitle, h2.hedertitle, h3.hedertitle {
+        color: greenyellow;
+      }
+    </pre>
+  </section>
   
+  <h3>Test:</h3>
   <div>
     Este texto no es un div hijo
     <div id="platano">
@@ -110,6 +168,7 @@
     </ol>  
     
   </div>
+
   
 </body>
 </html>

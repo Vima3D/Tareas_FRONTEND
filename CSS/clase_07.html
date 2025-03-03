@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>07</title>
+    <title>Clase 07 CSS</title>
+    <link rel="stylesheet" href="../sytlesheet.css">
+
 </head>
 <style>
 
@@ -21,7 +23,7 @@
   }
 
   section > :nth-child(2) {
-    color: aquamarine;
+    color: rgb(143, 34, 26);
   }
 
   ol :nth-child(2n) {
@@ -53,9 +55,57 @@
 
 <body>
   
-  <h1><a href="">Web</a> para tarea de selectores</h1>
+  <a class="index_button" href="../index.html">Index</a>
+  <h1>Tarea 2 de selectores</h1>
   
   <section>
+    <h2>CSS:</h2>
+    <pre> 
+      p > a:first-of-type {
+        color: blue;
+      }
+    
+      form > input:checked + label{
+        color: red;
+      }
+    
+      article p:last-of-type {
+        color: green;
+      }
+    
+      section > :nth-child(2) {
+        color: aquamarine;
+      }
+    
+      ol :nth-child(2n) {
+        color: red;
+      }
+    
+      ul li:nth-last-of-type(3) {
+        color: violet;
+      }
+    
+      p a:nth-of-type() {
+        color: yellow;
+      }
+    
+      button:only-of-type {
+        color: red;
+      }
+    
+      p > span:first-child {
+        color: red;
+      }
+    
+      body >:nth-last-child(2) {
+        color: yellow;
+      }
+    </pre>
+
+  </section>
+
+  <section>
+    <h3>Test:</h3>
     Este texto no es un div hijo
     <p>
       Lorem <span>ipsum</span>, dolor sit amet consectetur adipisicing elit. Numquam assumenda quis pariatur praesentium consequuntur natus ex! <span>Deserunt</span> ab sunt, animi deleniti laboriosam libero modi odio molestiae minima ut, harum nisi?
@@ -130,8 +180,10 @@
   <section>
     <h2>Segunda seccion</h2>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, voluptatum repudiandae sapiente expedita consequuntur possimus quibusdam esse inventore quos, sunt culpa? Maiores, sequi? Nobis perspiciatis in laborum quaerat, officia quam.</p>
-    <img src="" alt="no_img">
   </section>
+
   
+
+
 </body>
 </html>
