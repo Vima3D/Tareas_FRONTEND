@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    padding: 0 20px;
+    margin: 0;
+}
+
+header {
+    background-color: #515DEF;
+    background-image: url(./img/Mask\ Group.jpg);
+    background-repeat: no-repeat;
+    background-position: top right;
+}
+
+div.container {
+    padding-left: 160px;
+    padding-right: 160px;
+    color: white;
+}
+
+nav.navbar {
+    display: flex;
+    gap: 148px;
+    padding-top: 34px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 56px;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 200;
+    align-items: center;
+}
+
+.navbar ul li:last-of-type {
+    margin-left: auto;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+section.services {
+    background-color: white;
+}
+
+a.button-1 {
+    background-color: #515DEF;
+    color: white;
+    padding: 15px;
+}
+
+section.header_content {
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+
+section.header_content p:first-of-type {
+    font-size: 24px;
+}
+
+section.header_content h1 {
+    font-size: 64px;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 80px;
+}
+
+section.header_content p:nth-of-type(2) {
+    width: 52%;
+    font-size: 24px;
+    margin-bottom: 60px;
+}
+
+a.button-2 {
+    background-color: white;
+    color: black;
+    padding: 0px 15px;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    font-size: 24px;
+    margin-bottom: 60px;
+    text-decoration: none;
+}
+
+section.services {
+    display: flex;
+    width: 64%;
+    padding: 65px 80px;
+    gap: 80px;
+}
+
+section.services article {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+section.services article p {
+    color: rgb(99, 99, 99);
+}
+
+section.services article h2 {
+    font-size: 20px;
+}
+
+section.services article img {
+    width: 50px;
+}
+
+
+
