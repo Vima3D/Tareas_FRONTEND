@@ -14,6 +14,7 @@ body {
 header {
     background-color: #515DEF;
     background-image: url(./img/Mask\ Group.jpg);
+    background-size: 43%;
     background-repeat: no-repeat;
     background-position: top right;
 }

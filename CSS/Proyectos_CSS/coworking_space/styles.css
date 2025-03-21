@@ -1,0 +1,129 @@
+:root {
+    --black: #313131;
+    --grey: #909090;
+    --brown: #9B9A78;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+    color: var(--black);
+}
+
+body {
+    margin: 0;
+    padding: 0px 160px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 33px;
+    margin-bottom: 50px;
+}
+
+.navbar ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    gap: 56px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #313131;
+}
+
+a.active {
+    color: var(--brown);
+}
+
+a.sing-in {
+    text-decoration: underline;
+    color: var(--brown);
+}
+
+a.button {
+    background-color: var(--brown);
+    color: white;
+    padding: 15px 40px;
+}
+
+.navbar ul:last-of-type {
+    align-items: center;
+}
+
+section.hero {
+    background-image: url(./img/Placeholder.jpg);
+    background-size: 60%;
+    background-repeat: no-repeat;
+    padding: 40px 0px;
+    margin-bottom: 40px;
+}
+
+div.hero-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(3px);
+    width: 50%;
+    margin-left: auto;
+    padding: 26px 46px;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    font-family: "Playfair Display", serif;
+    width: 80%;
+}
+
+.hero-content p {
+    font-size: 24px;
+    color: var(--grey);
+}
+
+ul.checks {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 30%;
+    margin-left: auto;
+}
+
+ul.checks li {
+    background-image: url(./img/Check.svg);
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    padding-left: 30px;
+    margin: 10px 0px;
+}
+
+section.services {
+    display: flex;
+    justify-content: space-around;
+}
+
+section.services article {
+    padding: 27px 96px;
+}
+
+.services img {
+    width: 60px;
+}
+
+.services h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.services p {
+    width: 80%;
+    color: var(--grey);
+}
