@@ -80,6 +80,15 @@ div.hero-content {
     width: 80%;
 }
 
+.hero-content h1::before {
+    content: "";
+    background-color: var(--brown);
+    padding: 5px 40px;
+    position: absolute;
+    right: 130px;
+    top: 115px;
+}
+
 .hero-content p {
     font-size: 24px;
     color: var(--grey);
