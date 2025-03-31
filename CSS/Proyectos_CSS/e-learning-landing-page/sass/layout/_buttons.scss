@@ -1,0 +1,39 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+a.button-1 {
+    padding: 14px 30px;
+    background-color: $dark-blue;
+    color: white;
+    border-radius: 50px;
+    font-weight: 700;
+}
+
+a.button-2 {
+    padding: 14px 30px;
+    background-image: $gradient-orange-pink;
+    color: white;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.button-3 {
+    padding: 14px 30px 14px 0px;
+    color: $pink;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.button-4 {
+    padding: 14px 30px;
+    background-image: $gradient-blue-purple;
+    color: white;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}

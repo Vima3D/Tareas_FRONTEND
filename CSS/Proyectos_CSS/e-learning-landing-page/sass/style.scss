@@ -1,0 +1,24 @@
+@use './layout/variables' as *;
+@use './layout/mixins' as *;
+@use './layout/buttons' as *;
+@use './layout/header' as *;
+@use './layout/courses' as *;
+@use './layout/footer' as *;
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $base-font;
+}
+
+body {
+    margin: 0;
+    background-image: $gradient-light-white; 
+}
+
+main {
+    padding: 0px 20px;
+}
+

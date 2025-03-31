@@ -1,0 +1,9 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+footer  {
+    background-color: $dark-blue;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+}

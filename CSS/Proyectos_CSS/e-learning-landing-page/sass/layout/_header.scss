@@ -1,0 +1,74 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+header {
+    margin-bottom: 70px;
+    padding: 0px 20px;
+}
+
+section.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px 20px;
+}
+
+section.navbar ul {
+    @include reset-list();
+}
+
+section.navbar a {
+    text-decoration: none;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.hero p {
+    color: $grey;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.hero a {
+    margin-bottom: 20px;
+}
+
+.girl img {
+    display: block;
+    width: 80%;
+    margin: auto;
+}
+
+div.picture {
+    position: relative;
+}
+
+div.members, div.course-hours {
+    position: absolute;
+    @include white-cube();
+    & span:first-of-type {
+        color: $grey;
+        font-weight: 700;
+    }
+    & span:last-of-type {
+        color: black;
+        font-size: 32px;
+        font-weight: 800;
+    }
+}
+
+div.members {
+    top: 0;
+    right: 0;
+}
+
+div.course-hours {
+    bottom: 0;
+}
+
+
+
+
