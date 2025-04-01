@@ -6,4 +6,7 @@ footer  {
     padding: 50px 20px;
     display: flex;
     justify-content: space-between;
+    @include breakpoint(desktop) {
+        padding: 40px 120px;
+    }
 }

@@ -25,6 +25,11 @@ a.button-1 {
     text-decoration: none;
 }
 
+a.button-1:hover {
+    background-color: black;
+    color: white;
+}
+
 section.navbar {
     display: flex;
     justify-content: space-between;
@@ -44,6 +49,32 @@ section.navbar ul {
     gap: 30px;
 }
 
+nav li:hover {
+    background-color: black;
+    padding: 0px 0px;
+    border-radius: 20px;
+}
+
+
+
+
+aside ul:nth-of-type(1) a:hover {
+    background-color: black;
+    color: white;
+    padding: 20px 0px 10px;
+    border-radius: 30px;
+    display: absolute;
+}
+
+aside ul:nth-of-type(2) li:nth-of-type(1) a:hover {
+    background-color: black;
+    color: white;
+    padding: 20px 0px 10px;
+    border-radius: 30px;
+    display: absolute;
+}
+
+
 section.navbar aside {
     display: flex;
     align-items: center;
@@ -55,7 +86,9 @@ section.navbar nav a {
     color: var(--dark-blue);
 }
 
-
+section.navbar nav a:hover {
+    color: white;
+}
 
 section.hero {
     display: grid;
@@ -101,6 +134,11 @@ a.button-2 {
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+a.button-2:hover {
+    background-color: black;
+    color: white;
 }
 
 img.play {
