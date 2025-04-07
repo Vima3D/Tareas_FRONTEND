@@ -1,0 +1,139 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+main {
+    & a.back-button {
+        display: flex;
+        text-decoration: none;
+        color: white;
+        font-family: $title-font;
+        font-weight: 800;
+        font-size: 24px;
+        letter-spacing: 3.4px;
+        position: absolute;
+        & div {
+            padding: 20px;
+        }
+        & div:nth-of-type(1) {
+            background-color: $gold;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        & div:nth-of-type(2) {
+            background-color: black;
+        }
+    }
+
+    & div.map {
+        img:nth-of-type(2) {
+            display: none;
+        }
+    }
+
+    & img {
+        width: 100%;
+    }
+    & div.our-location {
+        background-color: black;
+        color: white;
+        padding: 20px 20px;
+        font-family: $title-font;
+        font-size: 40px;
+        & h2 {
+            margin-top: 30px;
+            margin-bottom: 40px;
+        }
+        & h3 {
+            font-size: 30px;
+            color: $gold;
+        }
+        & span, & p {
+            font-family: $base-font;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 28px;
+            color: $grey;
+        }
+        & span {
+            display: block;
+            padding: 5px 0px;
+        }
+    }
+
+    @include breakpoint(tablet) {
+        a.back-button {
+            left: 40px;
+        }
+        
+        div.map {
+            img:nth-of-type(2) {
+                display: block;
+            }
+            img:nth-of-type(1) {
+                display: none;
+            }
+        }
+
+        div.our-location {
+            display: grid;
+            grid-template-columns: 40% 60%;
+            padding: 60px 0px;
+            h2, div {
+                padding: 0px 40px;
+            }
+        }
+    }
+
+    @include breakpoint(desktop) {
+        >div img {
+            height: 600px;
+            object-fit: cover;
+        }
+        div.our-location {
+            padding: 80px 100px;
+            h2 {
+                width: 40%;
+                font-size: 70px;
+            }
+            h3 {
+                font-size: 40px;
+            }
+            p, span {
+                font-size: 22px;
+            }
+        }
+    }
+
+
+
+}
+
+footer.our-location {
+    background-color: $gold;
+    color: black;
+    & h3 {
+        font-weight: 900;
+        line-height: 24px;
+    }
+    & p {
+        color: black;
+    }
+    & div svg {
+        width: 30px;
+        path {
+            fill: black;
+        }
+    }
+    @include breakpoint(desktop) {
+        h3 {
+            font-size: 40px;
+            line-height: 38px;
+        } 
+        p {
+            font-size: 24px;
+            width: 82%;
+        }
+        div {
+            margin-top: 30px;
+        }
+    }
+}
