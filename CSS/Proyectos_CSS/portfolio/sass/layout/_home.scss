@@ -1,0 +1,159 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+main {
+    position: relative;
+    color: white;
+    padding: 0px 20px;
+    @include breakpoint(tablet){
+        hr {
+            display: none;
+        }
+    }
+    @include breakpoint(desktop){
+        padding: 0px 160px;
+        max-width: 2000px;
+        margin: auto;
+    }
+    section.expertice {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @include breakpoint(tablet){
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-row: auto;
+        }
+        @include breakpoint(desktop){
+            grid-template-columns: auto auto auto;
+            gap: 80px 20px;
+            margin: 100px 0px;
+        }
+        img.decoration {
+            position: absolute;
+            width: 160px;
+            height: 150px;
+            object-fit: cover;
+            object-position: 100% 50%;
+            top: 480px;
+            left: 60%;
+            transform: rotate(180deg);
+            @include breakpoint(tablet){
+                width: 200px;
+                top: 300px;
+                left: 74%;
+            }
+            @include breakpoint(desktop){
+                width: 300px;
+                top: 250px;                
+            }
+            @include breakpoint(desktopxl){
+                width: 370px;
+            }
+            
+        }
+        >div {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr;
+            text-align: center;
+            @include breakpoint(tablet){
+                text-align: left;
+                gap: 10px;
+            }
+            div:nth-of-type(1) {
+                font-size: 32px;
+                font-weight: 700;
+                @include breakpoint(tablet){
+                    font-size: 48px;
+                }
+            }
+            div:nth-of-type(2) {
+                font-size: 16px;
+                font-weight: 400;
+                color: $dark-white;
+                @include breakpoint(tablet){
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    section.projects {
+        div.title {
+            display: flex;
+            justify-content: space-between;
+            h2 {
+                font-size: 40px;
+                width: max-content;
+                @include breakpoint(tablet){
+                    font-size: 72px;
+                }
+            }
+        }
+        div.container {
+            @include breakpoint(tablet){
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+                margin-bottom: 40px;
+            }
+            @include breakpoint(desktop){
+                gap: 50px 30px;
+                margin-bottom: 120px;
+            }
+            div.project:hover {
+                div.buttons {
+                    opacity: 1;
+                }
+                img {
+                    opacity: 0.3;
+                }
+            }
+            h3 {
+                @include breakpoint(desktopxl){
+                    font-size: 24px;
+                }
+            }
+            span {
+                margin-right: 15px;
+                @include breakpoint(desktopxl){
+                    font-size: 18px;
+                }
+            }
+            >div {
+                position: relative;
+            }
+            div.buttons {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                margin-top: 10px;
+                margin-bottom: 60px;
+                @include breakpoint(desktop) {
+                    position: absolute;
+                    top: 30%;
+                    left: 0;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    grid-template-rows: 1fr 1fr;
+                    justify-items: center;
+                    gap: 20px;
+                    opacity: 0;
+                }
+                a {
+                    @include breakpoint(desktop) {
+                    padding-left: 30px;
+                    font-size: 24px;
+                        &::after{
+                            left: 30px
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
