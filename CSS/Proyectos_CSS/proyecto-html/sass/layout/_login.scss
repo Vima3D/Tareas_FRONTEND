@@ -1,0 +1,43 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+main.login {
+    h1 {
+        text-align: center;
+        font-size: 64px;
+    }
+    form {
+        fieldset {
+            legend {
+                font-size: 34px;
+                font-weight: 800;
+            }
+            div.log {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            label {
+                font-size: 24px;
+            }
+            input {
+                background-color: gray;
+                &:focus {
+                    border: 5px solid green;
+                }
+                &:invalid {
+                    border: 5px solid red;
+                }
+            }
+        }
+        button {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            &:hover {
+                background-color: gray;
+                color: black;
+            }
+        }
+    }
+}

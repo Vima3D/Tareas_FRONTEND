@@ -1,0 +1,10 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+main.quienes-somos {
+    text-align: center;
+    img {
+        background-image: linear-gradient(white, black) ;
+        border-radius: 8px;
+    }
+}

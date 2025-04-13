@@ -1,0 +1,396 @@
+a.button-1 {
+  padding: 14px 30px;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+}
+a.button-1:hover {
+  background-color: white;
+  color: black;
+}
+
+a.button-2 {
+  padding: 14px 30px;
+  color: white;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  background-color: rgb(25, 25, 25);
+}
+a.button-2:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+
+a.button-3 {
+  padding: 14px 30px 14px 0px;
+  color: blue;
+  border-radius: 50px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+}
+button:hover {
+  background-color: gray;
+  color: black;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 120px;
+  padding-top: 20px;
+}
+header figure {
+  margin: 0;
+  margin-top: 5px;
+}
+header nav {
+  display: flex;
+  gap: 5px;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 10px 30px;
+  border-radius: 8px;
+}
+header nav a:hover {
+  background-color: white;
+  color: black;
+}
+
+main {
+  padding: 0px 120px;
+}
+main section.hero {
+  position: relative;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main section.hero h1 {
+  font-size: 60px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+main section.hero h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+main section.hero a {
+  display: inline-block;
+}
+main section.hero img {
+  padding: 20px 0px;
+}
+main section.ultimos-cursos h2 {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+main section.ultimos-cursos p {
+  text-align: center;
+}
+main section.ultimos-cursos section.cursos {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+}
+main section.ultimos-cursos section.cursos article {
+  text-align: center;
+}
+main section.ultimos-cursos section.cursos article h3 {
+  font-size: 24px;
+}
+main section.ultimos-cursos section.cursos article img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+main section.ultimas-noticias {
+  text-align: center;
+  margin-bottom: 50px;
+}
+main section.ultimas-noticias h2 {
+  font-size: 34px;
+}
+main section.ultimas-noticias div.noticias {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+}
+main section.ultimas-noticias div.noticias a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+main section.ultimas-noticias div.noticias a:hover article {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.5) 100%);
+}
+main section.ultimas-noticias div.noticias a:hover div {
+  opacity: 1;
+}
+main section.ultimas-noticias div.noticias a article {
+  text-align: center;
+  background-color: rgb(22, 22, 22);
+  padding: 40px;
+  border-radius: 8px;
+}
+main section.ultimas-noticias div.noticias a article h3 {
+  font-size: 24px;
+}
+main section.ultimas-noticias div.noticias a div {
+  position: absolute;
+  top: 40%;
+  left: 34%;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  opacity: 0;
+}
+main section.ultimas-noticias a {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+main section.ultimas-noticias a:hover {
+  background-color: gray;
+  border-radius: 8px;
+  color: black;
+  text-decoration: underline;
+}
+
+footer {
+  background-color: black;
+  padding: 50px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1200px) {
+  footer {
+    padding: 40px 120px;
+  }
+}
+footer a {
+  color: gray;
+}
+
+main.quienes-somos {
+  text-align: center;
+}
+main.quienes-somos img {
+  background-image: linear-gradient(white, black);
+  border-radius: 8px;
+}
+
+main.cursos h2 {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+main.cursos p {
+  text-align: center;
+}
+main.cursos section.cursos {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+}
+main.cursos section.cursos article {
+  text-align: center;
+}
+main.cursos section.cursos article h3 {
+  font-size: 24px;
+}
+main.cursos section.cursos article img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+main.blog section.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main.blog section.cursos h2 {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+main.blog section.cursos p {
+  text-align: center;
+}
+main.blog section.cursos div {
+  display: grid;
+  grid-template-columns: 40% 40%;
+  justify-content: space-around;
+}
+main.blog section.cursos div article {
+  text-align: center;
+}
+main.blog section.cursos div article h3 {
+  font-size: 24px;
+}
+main.blog section.cursos div article img {
+  width: 400px;
+  height: 300px;
+  object-fit: cover;
+}
+
+main.registro h1 {
+  text-align: center;
+  font-size: 64px;
+}
+main.registro form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main.registro form fieldset legend {
+  font-size: 34px;
+  font-weight: 800;
+}
+main.registro form fieldset label {
+  font-size: 24px;
+}
+main.registro form fieldset input {
+  background-color: gray;
+}
+main.registro form fieldset input:focus {
+  border: 5px solid green;
+}
+main.registro form fieldset input:invalid {
+  border: 5px solid red;
+}
+main.registro form fieldset textarea {
+  background-color: gray;
+}
+
+main.login h1 {
+  text-align: center;
+  font-size: 64px;
+}
+main.login form fieldset legend {
+  font-size: 34px;
+  font-weight: 800;
+}
+main.login form fieldset div.log {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main.login form fieldset label {
+  font-size: 24px;
+}
+main.login form fieldset input {
+  background-color: gray;
+}
+main.login form fieldset input:focus {
+  border: 5px solid green;
+}
+main.login form fieldset input:invalid {
+  border: 5px solid red;
+}
+main.login form button {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+main.login form button:hover {
+  background-color: gray;
+  color: black;
+}
+
+main.contacto h1 {
+  text-align: center;
+  font-size: 64px;
+}
+main.contacto section.ubicacion {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+main.contacto section.ubicacion ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+main.contacto li {
+  margin-bottom: 20px;
+}
+main.contacto li a {
+  color: gray;
+}
+main.contacto span {
+  font-weight: 800;
+  font-size: 20px;
+  display: block;
+}
+main.contacto form {
+  width: 70%;
+  margin: auto;
+}
+main.contacto form fieldset {
+  text-align: center;
+}
+main.contacto form fieldset legend {
+  font-size: 34px;
+  font-weight: 800;
+}
+main.contacto form fieldset div.log {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main.contacto form fieldset label {
+  font-size: 24px;
+}
+main.contacto form fieldset input, main.contacto form fieldset textarea {
+  background-color: gray;
+}
+main.contacto form fieldset input:focus, main.contacto form fieldset textarea:focus {
+  border: 5px solid green;
+}
+main.contacto form fieldset input:invalid, main.contacto form fieldset textarea:invalid {
+  border: 5px solid red;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  color: white;
+  background-color: rgb(22, 22, 22);
+}
+
+body {
+  margin: 0;
+  padding: 0px;
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgb(41, 41, 41);
+}
+
+section.noticias {
+  text-align: center;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,34 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+main.registro {
+    h1 {
+        text-align: center;
+        font-size: 64px;
+    }
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        fieldset {
+            legend {
+                font-size: 34px;
+                font-weight: 800;
+            }
+            label {
+                font-size: 24px;
+            }
+            input {
+                background-color: gray;
+                &:focus {
+                    border: 5px solid green;
+                }
+                &:invalid {
+                    border: 5px solid red;
+                }
+            }
+            textarea {
+                background-color: gray;
+            }
+        }
+    }
+}

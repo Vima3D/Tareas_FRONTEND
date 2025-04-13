@@ -1,0 +1,36 @@
+@use './layout/variables' as *;
+@use './layout/mixins' as *;
+@use './layout/buttons' as *;
+@use './layout/header' as *;
+@use './layout/home' as *;
+@use './layout/footer' as *;
+@use './layout/quienes-somos' as *;
+@use './layout/cursos' as *;
+@use './layout/blog' as *;
+@use './layout/registro' as *;
+@use './layout/login' as *;
+@use './layout/contacto' as *;
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $base-font;
+    color: white;
+    background-color: rgb(22, 22, 22);
+}
+
+body {
+    margin: 0;
+    padding: 0px;
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(41, 41, 41);
+}
+
+section.noticias {
+    text-align: center;
+}
