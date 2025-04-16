@@ -1,24 +1,6 @@
 @mixin breakpoint($bp) {
   @if $bp == tablet {
-    @media (min-width: 768px) {
-      @content;
-    }
-  }
-
-  @if $bp == tablethorizontal {
-    @media (min-width: 1024px) {
-      @content;
-    }
-  }
-
-  @if $bp == desktop {
-    @media (min-width: 1200px) {
-      @content;
-    }
-  }
-
-  @if $bp == desktopxl {
-    @media (min-width: 1440px) {
+    @media only screen and (max-width: 768px) {
       @content;
     }
   }

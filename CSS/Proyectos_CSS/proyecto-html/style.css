@@ -53,13 +53,33 @@ header {
   padding: 0px 120px;
   padding-top: 20px;
 }
+@media only screen and (max-width: 768px) {
+  header {
+    flex-flow: column;
+    gap: 20px;
+  }
+}
 header figure {
   margin: 0;
   margin-top: 5px;
 }
+@media only screen and (max-width: 768px) {
+  header figure img {
+    width: 400px;
+  }
+}
 header nav {
   display: flex;
   gap: 5px;
+}
+@media only screen and (max-width: 768px) {
+  header nav {
+    font-size: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+  }
 }
 header nav a {
   text-decoration: none;
@@ -76,39 +96,85 @@ header nav a:hover {
 main {
   padding: 0px 120px;
 }
+@media only screen and (max-width: 768px) {
+  main a {
+    font-size: 40px;
+  }
+}
 main section.hero {
   position: relative;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media only screen and (max-width: 768px) {
+  main section.hero {
+    grid-template-columns: auto;
+    text-align: center;
+  }
+}
 main section.hero h1 {
   font-size: 60px;
   margin-top: 40px;
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 768px) {
+  main section.hero h1 {
+    font-size: 70px;
+  }
+}
 main section.hero h2 {
   font-size: 34px;
   margin-bottom: 10px;
 }
+@media only screen and (max-width: 768px) {
+  main section.hero p {
+    font-size: 34px;
+    width: 80%;
+    margin: auto;
+  }
+}
 main section.hero a {
   display: inline-block;
 }
+@media only screen and (max-width: 768px) {
+  main section.hero a {
+    margin: 30px 0px;
+    font-size: 40px;
+  }
+}
 main section.hero img {
   padding: 20px 0px;
+  width: 90%;
+  margin: auto;
 }
 main section.ultimos-cursos h2 {
   font-size: 34px;
   text-align: center;
   margin-bottom: 15px;
 }
+@media only screen and (max-width: 768px) {
+  main section.ultimos-cursos h2 {
+    font-size: 70px;
+  }
+}
 main section.ultimos-cursos p {
   text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  main section.ultimos-cursos p {
+    font-size: 40px;
+  }
 }
 main section.ultimos-cursos section.cursos {
   display: grid;
   grid-template-columns: 40% 40%;
   justify-content: space-around;
+}
+@media only screen and (max-width: 768px) {
+  main section.ultimos-cursos section.cursos {
+    grid-template-columns: auto;
+  }
 }
 main section.ultimos-cursos section.cursos article {
   text-align: center;
@@ -116,10 +182,21 @@ main section.ultimos-cursos section.cursos article {
 main section.ultimos-cursos section.cursos article h3 {
   font-size: 24px;
 }
+@media only screen and (max-width: 768px) {
+  main section.ultimos-cursos section.cursos article h3 {
+    font-size: 50px;
+  }
+}
 main section.ultimos-cursos section.cursos article img {
   width: 400px;
   height: 300px;
   object-fit: cover;
+}
+@media only screen and (max-width: 768px) {
+  main section.ultimos-cursos section.cursos article img {
+    width: 90%;
+    height: 600px;
+  }
 }
 main section.ultimas-noticias {
   text-align: center;
@@ -127,6 +204,11 @@ main section.ultimas-noticias {
 }
 main section.ultimas-noticias h2 {
   font-size: 34px;
+}
+@media only screen and (max-width: 768px) {
+  main section.ultimas-noticias h2 {
+    font-size: 70px;
+  }
 }
 main section.ultimas-noticias div.noticias {
   display: grid;
@@ -152,6 +234,11 @@ main section.ultimas-noticias div.noticias a article {
 }
 main section.ultimas-noticias div.noticias a article h3 {
   font-size: 24px;
+}
+@media only screen and (max-width: 768px) {
+  main section.ultimas-noticias div.noticias a article h3 {
+    font-size: 50px;
+  }
 }
 main section.ultimas-noticias div.noticias a div {
   position: absolute;
@@ -183,9 +270,9 @@ footer {
   display: flex;
   justify-content: space-between;
 }
-@media (min-width: 1200px) {
+@media only screen and (max-width: 768px) {
   footer {
-    padding: 40px 120px;
+    font-size: 50px;
   }
 }
 footer a {
@@ -195,9 +282,29 @@ footer a {
 main.quienes-somos {
   text-align: center;
 }
+@media only screen and (max-width: 768px) {
+  main.quienes-somos h1 {
+    font-size: 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main.quienes-somos p {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main.quienes-somos h2 {
+    font-size: 50px;
+  }
+}
 main.quienes-somos img {
   background-image: linear-gradient(white, black);
   border-radius: 8px;
+}
+@media only screen and (max-width: 768px) {
+  main.quienes-somos img {
+    width: 100%;
+  }
 }
 
 main.cursos h2 {
@@ -262,15 +369,36 @@ main.registro form {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media only screen and (max-width: 768px) {
+  main.registro form {
+    grid-template-columns: auto;
+    text-align: center;
+  }
+}
 main.registro form fieldset legend {
   font-size: 34px;
   font-weight: 800;
 }
+@media only screen and (max-width: 768px) {
+  main.registro form fieldset legend {
+    font-size: 50px;
+  }
+}
 main.registro form fieldset label {
   font-size: 24px;
 }
+@media only screen and (max-width: 768px) {
+  main.registro form fieldset label {
+    font-size: 50px;
+  }
+}
 main.registro form fieldset input {
   background-color: gray;
+}
+@media only screen and (max-width: 768px) {
+  main.registro form fieldset input {
+    font-size: 34px;
+  }
 }
 main.registro form fieldset input:focus {
   border: 5px solid green;
@@ -290,31 +418,42 @@ main.login form fieldset legend {
   font-size: 34px;
   font-weight: 800;
 }
+@media only screen and (max-width: 768px) {
+  main.login form fieldset legend {
+    font-size: 50px;
+  }
+}
 main.login form fieldset div.log {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+@media only screen and (max-width: 768px) {
+  main.login form fieldset div.log {
+    grid-template-columns: auto;
+    text-align: center;
+  }
+}
 main.login form fieldset label {
   font-size: 24px;
 }
+@media only screen and (max-width: 768px) {
+  main.login form fieldset label {
+    font-size: 50px;
+  }
+}
 main.login form fieldset input {
   background-color: gray;
+}
+@media only screen and (max-width: 768px) {
+  main.login form fieldset input {
+    font-size: 40px;
+  }
 }
 main.login form fieldset input:focus {
   border: 5px solid green;
 }
 main.login form fieldset input:invalid {
   border: 5px solid red;
-}
-main.login form button {
-  background-color: black;
-  color: white;
-  padding: 20px;
-  border-radius: 8px;
-}
-main.login form button:hover {
-  background-color: gray;
-  color: black;
 }
 
 main.contacto h1 {
@@ -326,6 +465,17 @@ main.contacto section.ubicacion {
   grid-template-columns: 1fr 1fr;
   text-align: center;
 }
+@media only screen and (max-width: 768px) {
+  main.contacto section.ubicacion {
+    grid-template-columns: auto;
+    margin-bottom: 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  main.contacto section.ubicacion iframe {
+    margin: auto;
+  }
+}
 main.contacto section.ubicacion ul {
   margin: 0;
   padding: 0;
@@ -334,6 +484,11 @@ main.contacto section.ubicacion ul {
 main.contacto li {
   margin-bottom: 20px;
 }
+@media only screen and (max-width: 768px) {
+  main.contacto li {
+    font-size: 50px;
+  }
+}
 main.contacto li a {
   color: gray;
 }
@@ -341,6 +496,11 @@ main.contacto span {
   font-weight: 800;
   font-size: 20px;
   display: block;
+}
+@media only screen and (max-width: 768px) {
+  main.contacto span {
+    font-size: 60px;
+  }
 }
 main.contacto form {
   width: 70%;
@@ -353,6 +513,11 @@ main.contacto form fieldset legend {
   font-size: 34px;
   font-weight: 800;
 }
+@media only screen and (max-width: 768px) {
+  main.contacto form fieldset legend {
+    font-size: 50px;
+  }
+}
 main.contacto form fieldset div.log {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -360,8 +525,18 @@ main.contacto form fieldset div.log {
 main.contacto form fieldset label {
   font-size: 24px;
 }
+@media only screen and (max-width: 768px) {
+  main.contacto form fieldset label {
+    font-size: 40px;
+  }
+}
 main.contacto form fieldset input, main.contacto form fieldset textarea {
   background-color: gray;
+}
+@media only screen and (max-width: 768px) {
+  main.contacto form fieldset input, main.contacto form fieldset textarea {
+    font-size: 30px;
+  }
 }
 main.contacto form fieldset input:focus, main.contacto form fieldset textarea:focus {
   border: 5px solid green;

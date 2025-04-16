@@ -3,25 +3,50 @@
 
 main {
     padding: 0px 120px;
+    @include breakpoint(tablet) {
+        a {
+            font-size: 40px;
+        }           
+    }
     section.hero {
         position: relative;
         margin: auto;
         display: grid;        
         grid-template-columns: 1fr 1fr;
+        @include breakpoint(tablet) {
+            grid-template-columns: auto;
+            text-align: center;
+        }
         h1 {
             font-size: 60px;
             margin-top: 40px;
             margin-bottom: 20px;
+            @include breakpoint(tablet) {
+                font-size: 70px;
+            }
         }
         h2 {
             font-size: 34px;
             margin-bottom: 10px;
         }
+        p {
+            @include breakpoint(tablet) {
+                font-size: 34px;   
+                width: 80%;
+                margin: auto;
+            }
+        }
         a {
             display: inline-block;
+            @include breakpoint(tablet) {
+                margin: 30px 0px;
+                font-size: 40px;
+            }
         }
         img {
             padding: 20px 0px;
+            width: 90%;
+            margin: auto;
         }
     }
     section.ultimos-cursos {
@@ -29,23 +54,39 @@ main {
             font-size: 34px;
             text-align: center;
             margin-bottom: 15px;
+            @include breakpoint(tablet) {
+                font-size: 70px;   
+            }
         }
         p {
             text-align: center;
+            @include breakpoint(tablet) {
+                font-size: 40px;   
+            }
         }
         section.cursos {
             display: grid;
             grid-template-columns: 40% 40%;
             justify-content: space-around;
+            @include breakpoint(tablet) {
+                grid-template-columns: auto;
+            }
             article {
                 text-align: center;
                 h3 {
                     font-size: 24px;
+                    @include breakpoint(tablet) {
+                        font-size: 50px;
+                    }
                 }
                 img {
                     width: 400px;
                     height: 300px;
                     object-fit: cover;
+                    @include breakpoint(tablet) {
+                        width: 90%;
+                        height: 600px;
+                    }
                 }
             }
         }
@@ -55,6 +96,9 @@ main {
         margin-bottom: 50px;
         h2 {
             font-size: 34px;
+            @include breakpoint(tablet) {
+                font-size: 70px;
+            }
         }
         div.noticias {
             display: grid;
@@ -79,6 +123,9 @@ main {
                     border-radius: 8px;
                     h3 {
                         font-size: 24px;
+                        @include breakpoint(tablet) {
+                            font-size: 50px;
+                        }
                     }
                 }
                 div {

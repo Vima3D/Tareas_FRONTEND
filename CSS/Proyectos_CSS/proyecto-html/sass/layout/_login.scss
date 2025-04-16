@@ -11,32 +11,35 @@ main.login {
             legend {
                 font-size: 34px;
                 font-weight: 800;
+                @include breakpoint(tablet) {
+                    font-size: 50px;
+                }
             }
             div.log {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
+                @include breakpoint(tablet) {
+                    grid-template-columns: auto;
+                    text-align: center;
+                }
             }
             label {
                 font-size: 24px;
+                @include breakpoint(tablet) {
+                    font-size: 50px;
+                }
             }
             input {
                 background-color: gray;
+                @include breakpoint(tablet) {
+                    font-size: 40px;
+                }
                 &:focus {
                     border: 5px solid green;
                 }
                 &:invalid {
                     border: 5px solid red;
                 }
-            }
-        }
-        button {
-            background-color: black;
-            color: white;
-            padding: 20px;
-            border-radius: 8px;
-            &:hover {
-                background-color: gray;
-                color: black;
             }
         }
     }

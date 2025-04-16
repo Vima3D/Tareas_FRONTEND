@@ -3,8 +3,26 @@
 
 main.quienes-somos {
     text-align: center;
+    h1 {
+        @include breakpoint(tablet) {
+            font-size: 70px;
+    }
+    }
+    p {
+        @include breakpoint(tablet) {
+            font-size: 50px;   
+        }
+    }
+    h2 {
+        @include breakpoint(tablet) {
+            font-size: 50px;   
+        }
+    }
     img {
         background-image: linear-gradient(white, black) ;
         border-radius: 8px;
+        @include breakpoint(tablet) {
+                width: 100%;
+        }
     }
 }
