@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase 17.1 JAVASCRIPT</title>
+    <script>
+        // Ejercicio 1. Calculadora
+        class Calculadora {
+            //propiedades
+            #resultado;
+
+            //constructor
+            constructor() {
+                this.#resultado = 0;
+            }
+
+            //métodos
+            sumar(n) {
+                try {
+                    if (isNaN(n)) {
+                        throw Error('No se ha introducido un número válido')
+                    } else {
+                        this.#resultado += n
+                    }
+                } catch (err) {
+                    console.error(err.message);
+                }
+            }
+
+            restar(n) {
+                try {
+                    if (isNaN(n)) {
+                        throw Error('No se ha introducido un número válido')
+                    } else {
+                        this.#resultado -= n
+                    }
+                } 
+                catch (err) {
+                    console.error(err.message)
+                }
+            }
+
+            multiplicar(n) {
+                try {
+                    if (isNaN(n)) {
+                        throw Error('No se ha introducido un número válido')
+                    } else {
+                        this.#resultado *= n
+                    }
+                } 
+                catch (err) {
+                    console.error(err.message)
+                }
+            }
+
+            dividir(n) {
+                try {
+                    if (isNaN(n)) {
+                        throw Error('No se ha introducido un número válido')
+                    } else if (n == 0){
+                        throw Error('No se puede dividir por 0')
+                    } else {
+                        this.#resultado /= n
+                    }
+                } 
+                catch (err) {
+                    console.error(err.message)
+                }
+            }
+
+            obtenerResultado() {
+                return this.#resultado
+            }
+
+            reiniciar() {
+                this.#resultado = 0
+            }
+        }
+
+        let calc = new Calculadora();
+
+        calc.sumar(5);
+        console.log(calc.obtenerResultado())
+        calc.restar('hola')
+        calc.dividir(5)
+        console.log(calc.obtenerResultado())
+        calc.sumar(25)
+        console.log(calc.obtenerResultado())
+        calc.dividir(0)
+        console.log(calc.obtenerResultado())
+        calc.dividir('hellow')
+        console.log(calc.obtenerResultado())
+        calc.dividir(4)
+        console.log(calc.obtenerResultado())
+        calc.sumar(8)
+        console.log(calc.obtenerResultado())
+        calc.restar(6)
+        console.log(calc.obtenerResultado())
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 1 - Clase 17 JAVASCRIPT</h1>
+    <h2>Calculadora</h2>
+
+    
+</body>
+</html>

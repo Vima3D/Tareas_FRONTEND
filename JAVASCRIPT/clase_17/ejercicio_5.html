@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase 17.5 JAVASCRIPT</title>
+    <script>
+        // Ejercicio 5 - Celular
+        class Celular {
+            //Propiedades
+            #contactos
+            #llamadas
+
+            constructor() {
+                this.#contactos = []
+                this.#llamadas = []
+            }
+
+            //Métodos
+            agregarContacto(contacto) {
+                let nuevoContacto = contacto[0]
+                let nuevoTelefono = contacto[1]
+                let contacto_existe = false
+                if (this.#contactos.length > 0) {
+                    for (let contacto of this.#contactos) {
+                        if (contacto.nombre == nuevoContacto || contacto.telefono == nuevoTelefono) {
+                            contacto_existe = true
+                            break
+                        }
+                    }
+                    if (contacto_existe == false) {
+                        this.#contactos.push({nombre: nuevoContacto, tel: nuevoTelefono})
+                    } else {
+                        console.log(`El nombre ${nuevoContacto} o telefono ${nuevoTelefono} ya existe`) 
+                    }
+                } else {
+                    console.log('Agregando primer contacto...')
+                    this.#contactos.push({nombre: nuevoContacto, telefono: nuevoTelefono})
+                }
+            }
+
+            buscarPorNombre(nombre) {
+                let dentro = false
+                for (let contacto of this.#contactos) {
+                    if (contacto.nombre == nombre) {
+                        console.log(`Buscando '${nombre}' en el celular:`)
+                        console.log(contacto)
+                        dentro = true
+                        break
+                    }
+                }
+                if (dentro == false) {
+                    console.log(`El nombre ${nombre} no se encontró en la lista`)
+                }
+            }
+
+            buscarPorNumero(numero) {
+                let dentro = false
+                for (let contacto of this.#contactos) {
+                    if (contacto.telefono == numero) {
+                        console.log(`Buscando contacto con teléfono ${numero}:`)
+                        console.log(contacto)
+                        dentro = true
+                        break
+                    }
+                }
+                if (dentro == false) {
+                    console.log(`El teléfono ${numero} no se encontró en la lista`)
+                }
+            }
+
+            eliminarContacto(nombre) {
+                let index = -1
+                for (let contacto of this.#contactos) {
+                    if (contacto.nombre == nombre) {
+                        index = this.#contactos.indexOf(contacto)
+                        this.#contactos.splice(index,1)
+                        console.log(`El contacto <${nombre}> ha sido eliminado`)
+                        break
+                    }
+                }
+                if (index < 0) {
+                    console.log('No podemos eliminar un contacto que no existe')
+                }
+            }
+
+            llamar(nombre) {
+                let dentro = false
+                for (let contacto of this.#contactos) {
+                    if (contacto.nombre == nombre) {
+                        console.log(`Llamando a '${nombre}'`)
+                        this.#llamadas.push({llamada_realizada: nombre})
+                        dentro = true
+                        break
+                    }
+                }
+                if (dentro == false) {
+                    console.log(`Imposible llamar a '${nombre}'. No está en contactos`)
+                }
+            }
+
+            verContactos() {
+                console.log('Contactos:')
+                for (let contacto of this.#contactos) {
+                    console.log(contacto)
+                    }
+                }
+
+            verHistorial() {
+                console.log('Has llamado a las siguientes personas:')
+                for (let llamada of this.#llamadas) {
+                    console.log(llamada)
+                }
+            }
+        }
+
+
+        // Prueba de ejecución
+
+        let celular_01 = new Celular()
+
+        let contacto_01 = ['Victor', 643109342]
+        let contacto_02 = ['Zuley', 603029463]
+        let contacto_03 = ['Mateo', 900234109]
+        let contacto_04 = ['Marta', 640109452]
+
+        celular_01.agregarContacto(contacto_01)
+        celular_01.agregarContacto(contacto_02)
+        celular_01.agregarContacto(contacto_03)
+        celular_01.verContactos()
+        celular_01.agregarContacto(contacto_01)
+        celular_01.agregarContacto(contacto_04)
+        celular_01.buscarPorNombre('Zuley')
+        celular_01.buscarPorNombre('Carlos')
+        celular_01.buscarPorNumero(643109342)
+        celular_01.buscarPorNumero(743106342)
+        celular_01.eliminarContacto('Mateo')
+        celular_01.eliminarContacto('Carlos')
+        celular_01.llamar('Zuley')
+        celular_01.llamar('Mateo')
+        celular_01.llamar('Victor')
+        celular_01.verContactos()
+        celular_01.verHistorial()
+
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 5 - Clase 17 JAVASCRIPT</h1>
+    <h2>Celular</h2>
+</body>
+</html>

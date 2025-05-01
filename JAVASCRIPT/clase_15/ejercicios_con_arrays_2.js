@@ -1,29 +1,22 @@
 /* Ejercicio 1
-Crea un nuevo array donde cada elemento del array original se duplique
-*/
-
+Crea un nuevo array donde cada elemento del array original se duplique*/
 let miArray = [2,4,6,3,4,12]
 let miArrayDobles = miArray.map(i => i*2)
 console.log(miArrayDobles)
 
 /* Ejercicio 2
-Calcula la suma de todos los elementos en el array creado en el ejercicio 1 e imprímelo.
-*/
-
+Calcula la suma de todos los elementos en el array creado en el ejercicio 1 e imprímelo.*/
 let sumaArray = miArrayDobles.reduce((acc, i) => acc += i,0)
 console.log(sumaArray)
 
 /* Ejercicio 3
-Crea un nuevo array que contenga solo los números pares del array original.
-*/
-
+Crea un nuevo array que contenga solo los números pares del array original.*/
 miArray_2 = [2,3,6,1,3,23,20]
 let paresMiArray_2 = miArray_2.filter(i => i%2 == 0)
 console.log(paresMiArray_2)
 
 /* Ejercicio 4
-Pide al usuario que ingrese un número y verifica si está presente en el array.
-*/
+Pide al usuario que ingrese un número y verifica si está presente en el array.*/
 let numUsuario = 0
 //numUsuario = Number(prompt('Introduce un número'))
 if (numUsuario in miArray){
@@ -33,7 +26,6 @@ if (numUsuario in miArray){
 }
 
 //6-Ordena el array de números en orden descendente y imprímelo.
-
 let arrayOrdenado = miArrayDobles.sort((a,b)=>a-b)
 console.log(arrayOrdenado)
 let arrayDescendente = arrayOrdenado.reverse()
@@ -41,7 +33,6 @@ console.log(arrayDescendente)
 
 //7- Dado dos arrays de números, array1 y array2, crea una función que devuelva un nuevo array que
 //contenga los elementos que son múltiplos de 3 y no sean múltiplos de 5. Además, asegúrate de que el nuevo array no contenga duplicados.
-
 const array1 = [2, 3, 5, 9, 12, 15];
 const array2 = [4, 6, 9, 12, 18, 20];
 
@@ -60,12 +51,10 @@ nuevoArray = nuevoArray.filter(i => i%3 == 0 && i%5 != 0)
 console.log(nuevoArray)
 
 // Ejercicio 8: Filtrar y transformar datos en un array
-
 // Dado un array de objetos que representan libros,
 // cada objeto tiene propiedades como título, autor y año de publicación.
 // Filtra los libros que fueron publicados después de 2000
 // y crea un nuevo array con los títulos de esos libros en mayúsculas.
-
 const libros = [
     { titulo: 'El señor de los anillos', nombre: 'J.R.R. Tolkien', year: 1954},
     { titulo: 'Harry Potter y la piedra filosofal', autor: 'J.K. Rowling', year: 1997 },
@@ -84,7 +73,6 @@ console.log(libros2000)
 
 // Ejercicio 9
 //Filtra los estudiantes que tienen una edad mayor o igual a 18 años y guárdalos en un nuevo array llamado estudiantesMayoresDeEdad.
-
 const estudiantes = [
     { nombre: 'Ana', edad: 20, calificaciones: [10, 90, 87] },
     { nombre: 'Carlos', edad: 22, calificaciones: [78, 92, 87] },
@@ -94,12 +82,10 @@ const estudiantes = [
     { nombre: 'Miguel', edad: 17, calificaciones: [76, 84, 80] },
     { nombre: 'Sara', edad: 23, calificaciones: [91, 9, 94] },
 ];
-
 let estudiantesMayores = estudiantes.filter(estudiante => estudiante.edad >= 18)
 console.log(estudiantesMayores)
 
 // Calcula el promedio de calificaciones para cada estudiante en el array estudiantesMayoresDeEdad y almacena los resultados en un nuevo array llamado promediosCalificaciones.
-
 let promediosCalificaciones = estudiantesMayores.map(estudiante => {
     let suma = estudiante.calificaciones.reduce((accu,nota) => {
         accu += nota;
@@ -111,7 +97,6 @@ let promediosCalificaciones = estudiantesMayores.map(estudiante => {
 console.log(promediosCalificaciones)
 
 // Encuentra al estudiante con la calificación más alta en el array promediosCalificaciones y muestra su nombre y calificación máxima en la consola.
-
 let mayorPromedio = promediosCalificaciones.reduce((accu, promedio) => {
     if (promedio > accu){
         accu = promedio
@@ -121,7 +106,6 @@ let mayorPromedio = promediosCalificaciones.reduce((accu, promedio) => {
 console.log(mayorPromedio)
 
 let indexMayorPromedio = promediosCalificaciones.indexOf(mayorPromedio)
-
 let estudianteDestacado = estudiantes[indexMayorPromedio]
 console.log(estudianteDestacado)
 
@@ -145,7 +129,6 @@ const ventas = [
     { producto: 'Pantalones', cantidad: 12, precioUnitario: 30 },
     { producto: 'Bufanda', cantidad: 15, precioUnitario: 10 },
 ];
-
 let ventasElevadas = ventas.filter(venta => venta.cantidad > 8)
 console.log(ventasElevadas)
 
@@ -166,12 +149,9 @@ ingresoMayor = ingresos.reduce((accu,ingreso)=>{
     return accu
 },0)
 console.log(ingresoMayor)
-
-
 let ventaIngresoMayor = ingresosTotales.filter(producto => producto.ingreso == ingresoMayor)
 console.log(ventaIngresoMayor)
 
 // Ordena el array original ventas de manera ascendente según la cantidad de productos vendidos.
-
 let ventasOrdenadas = ventas.sort((a,b)=> a.cantidad - b.cantidad)
 console.log(ventasOrdenadas)

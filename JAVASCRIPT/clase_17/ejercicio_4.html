@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase 17.4 JAVASCRIPT</title>
+    <script>
+        // Ejercicio 4 - Anotador
+
+        class Anotador {
+            //Propiedades
+            #titulo
+            #notas
+
+            constructor(titulo) {
+                this.#titulo = titulo
+                this.#notas = []
+            }
+
+            //métodos
+            agregarNota(nota) {
+                this.#notas.push(nota)
+            }
+
+            actualizarNota(id, nota) {
+                this.#notas[id] = nota
+            }
+
+            obtenerNota(id) {
+                return console.log(`La nota ${id} es: ${this.#notas[id]}`)
+            }
+
+            eliminarNota(id) {
+                this.#notas.splice(id,1)
+            }
+
+            eliminarNotas() {
+                this.#notas = []
+            }
+
+            listarNotas() {
+                console.log(`${this.#titulo}`)
+                if (this.#notas.length == 0){
+                    console.log('No hay notas registradas')
+                } else {
+                    for (let nota in this.#notas) {
+                        console.log(`Nota ${nota}: ${this.#notas[nota]}`)
+                    }
+                }
+            }
+        }
+
+        // Prueba de ejecución
+        let anotador_1 = new Anotador('Notas de Victor')
+
+        anotador_1.listarNotas()
+        anotador_1.agregarNota(8)
+        anotador_1.agregarNota(10)
+        anotador_1.agregarNota(9.5)
+        anotador_1.listarNotas()
+        anotador_1.obtenerNota(0)
+        anotador_1.actualizarNota(0, 9)
+        anotador_1.obtenerNota(0)
+        anotador_1.listarNotas()
+        anotador_1.eliminarNota(0)
+        anotador_1.listarNotas()
+        anotador_1.eliminarNotas()
+        anotador_1.listarNotas()
+
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 4 - Clase 17 JAVASCRIPT</h1>
+    <h2>Anotador</h2>
+</body>
+</html>

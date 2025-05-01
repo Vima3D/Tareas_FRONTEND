@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase 17.3 JAVASCRIPT</title>
+    <script>
+        // Ejercicio 3 - Televisor
+
+        class Televisor {
+            //Propiedades
+            #encendido
+            #canal
+            #canales
+            #volumen
+            #marca
+
+            constructor(marca, canales) {
+                this.#marca = marca
+                this.#canales = canales
+                this.#encendido = false
+                this.#canal = 0
+                this.#volumen = 0
+            }
+
+            //Métodos
+            prender() {
+                this.#encendido = true
+                console.log(`Televisor encendido`)
+            }
+
+            apagar() {
+                this.#encendido = false
+                console.log(`Televisor apagado`)
+            }
+
+            verCanalSiguiente() {
+                try {
+                    if (this.#encendido == false) {
+                        throw Error('No puedes cambiar canal estando el Televisor apagado')
+                    } else {
+                        if (this.#canal+1 > this.#canales) {
+                            this.#canal = 0
+                        } else {
+                            this.#canal += 1
+                        }
+                    }
+                } catch (err) {
+                    console.error(err.message)
+                }
+            }
+
+            verCanalAnterior() {
+                try {
+                    if (this.#encendido == false) {
+                        throw Error('No puedes cambiar canal estando el Televisor apagado')
+                    } else {
+                        if (this.#canal-1 < 0) {
+                            this.#canal = this.#canales
+                        } else {
+                            this.#canal -= 1
+                        }
+                    }
+                } catch (err) {
+                    console.error(err.message)
+                }
+            }
+
+            cambiarCanal(canal) {
+                try {
+                    if (this.#encendido == false) {
+                        throw Error('No puedes cambiar canal estando el Televisor apagado')
+                    } else {
+                        if (canal > this.#canales || canal < 0) {
+                            console.log(`No es posible cambiar al canar ${canal}, esta fuera del rango`)
+                        } else {
+                            this.#canal = canal 
+                        }
+                    }
+                } catch (err) {
+                    console.error(err.message)
+                }
+            }
+
+            subirVolumen() {
+                try {
+                    if (this.#encendido == false) {
+                        throw Error('No puedes subir el volumen estando el Televisor apagado')
+                    } else {
+                        if (this.#volumen == 100){
+                            console.log(`No puedes subir más de 100 el volumen`)
+                        } else {
+                            this.#volumen += 1
+                        }
+                    }
+                } catch (err) {
+                    console.error(err.message)
+                }
+
+            }
+
+            bajarVolumen() {
+                try {
+                    if (this.#encendido == false) {
+                        throw Error('No puedes bajar el volumen estando el Televisor apagado')
+                    } else {
+                        if (this.#volumen == 0) {
+                            console.log(`No es posible bajar más de 0 el volumen`)
+                        } else {
+                            this.#volumen -= 1
+                        }
+                    }
+                } catch (err) {
+                    console.error(err.message)
+                }
+            }
+
+            toString() {
+                console.log(`Televisor Samsung\n -Canales: ${this.#canales}\n -Canal actual: ${this.#canal}\n -Volumen actual: ${this.#volumen}`)
+            }
+        }
+
+
+        // Prueba de ejecución
+
+        let televisor_01 = new Televisor('Samsung', 100)
+
+        televisor_01.verCanalSiguiente()
+        televisor_01.prender()
+        televisor_01.verCanalAnterior()
+        televisor_01.subirVolumen()
+        televisor_01.cambiarCanal(45)
+        televisor_01.toString()
+        televisor_01.apagar()
+
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 3 - Clase 17 JAVASCRIPT</h1>
+    <h2>Televisor</h2>
+</body>
+</html>
