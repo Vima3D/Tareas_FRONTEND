@@ -2,11 +2,21 @@
 @use './variables' as *;
 
 main.blog {
-    section.hero {
+    section.blog-hero {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        .content {
+            padding: 20px 120px;
+        }
     }
     section.cursos {
+        figure:hover img {
+            -webkit-transform:scale(1.3);
+            transform:scale(1.3);
+        }
+        figure {
+            overflow: hidden;
+        }
         h2 {
             font-size: 34px;
             text-align: center;

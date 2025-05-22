@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 30.5 JAVASCRIPT</title>
+    <style>
+        div#box {
+            display: inline-block;
+            padding: 100px;
+            background-color: blue;
+            border: 1px solid black;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            transition: 0.5s all ease;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicios de Eventos</h1>
+    <h2>Ejercicio 05</h2>
+    <p>Crea una rutina que no permita que el ratón se coloque encima de una caja azul de 100 x 100 px. Cada vez que el ratón intente colocarse encima, la posición de la caja debe cambiar aleatoriamente por la página.</p>
+
+    <div id="box"></div>
+
+    
+    <script>
+
+        let box = document.getElementById('box')
+
+        function numeroRandom(){
+            let minimo = 0;
+            let maximo = 900;
+            let numeroRandom = Math.floor(Math.random() * (maximo - minimo + 1)) + minimo;
+            return numeroRandom
+        }
+
+        box.addEventListener('mouseover', () => {
+            box.style.top = `${numeroRandom()}px`
+            box.style.left = `${numeroRandom()}px`
+        })
+
+    </script>
+</body>
+</html>

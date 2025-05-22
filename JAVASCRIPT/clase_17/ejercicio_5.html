@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clase 17.5 JAVASCRIPT</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        padding: 2em;
+        line-height: 1.6;
+        background-color: #f5f5f5;
+        color: #333;
+        }
+        h2 {
+        color: #2a2a2a;
+        }
+        ul {
+        list-style-type: none;
+        padding-left: 1em;
+        }
+        ul li::before {
+        content: "• ";
+        color: #555;
+        }
+        strong {
+        font-weight: bold;
+        }
+        code {
+        background-color: #eaeaea;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+        }
+    </style>
     <script>
         // Ejercicio 5 - Celular
         class Celular {
@@ -147,5 +176,28 @@
 <body>
     <h1>Ejercicio 5 - Clase 17 JAVASCRIPT</h1>
     <h2>Celular</h2>
+    <h2>Celular</h2>
+    <h3>Propiedades</h3>
+    <ul>
+        <li><code>contactos</code> (array de objetos), inicializa vacío</li>
+        <li><code>llamadas</code> (array de strings), inicializa vacío</li>
+    </ul>
+    <h3>Métodos</h3>
+    <ul>
+        <li><strong><code>agregarContacto(contacto)</code></strong>: agrega <code>contacto</code> a <code>contactos</code></li>
+        <li><strong><code>buscarPorNombre(nombre)</code></strong>: devuelve el contacto con ese nombre o <code>undefined</code></li>
+        <li><strong><code>buscarPorNumero(numero)</code></strong>: devuelve el contacto con ese número o <code>undefined</code></li>
+        <li><strong><code>eliminarContacto(nombre)</code></strong>: elimina el contacto con nombre <code>nombre</code></li>
+        <li><strong><code>llamar(nombre)</code></strong>: registra una llamada al contacto con nombre <code>nombre</code> si existe</li>
+        <li><strong><code>verContactos()</code></strong>: devuelve un string con todos los contactos (nombre y número)</li>
+        <li><strong><code>verHistorial()</code></strong>: devuelve un string con la lista de llamadas</li>
+    </ul>
+    <h3>Observaciones</h3>
+    <ul>
+        <li><code>contacto</code> es un objeto con propiedades <code>nombre</code> y <code>numero</code></li>
+        <li>No se puede agregar un contacto si ya existe uno con el mismo nombre o número</li>
+    </ul>
+    <iframe src="./JAVA-17-5.pdf" width="100%" height="800px" frameborder="0"></iframe>
+
 </body>
 </html>

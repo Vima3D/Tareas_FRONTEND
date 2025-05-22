@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 30.8 JAVASCRIPT</title>
+    <style>
+        div.box {
+            background-color: black;
+            padding: 50px;
+        }
+
+        div.box:hover {
+            background-color: rgb(28, 28, 28);
+        }
+
+        div.tabla {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicios de Eventos</h1>
+    <h2>Ejercicio 08</h2>
+    <p>Juguemos a adivinar las parejas. Debes distribuir en la página una cuadrícula de 6 x 5 cajas. De las 30 cajas habrá 15 distintas. Cada par de cajas será de un color distinto. Inicialmente todas las cajas aparecerán negras. Cuando el usuario pinche sobre una caja, se revelará su auténtico color. En ese momento debes arrastrar la caja al lugar donde creas que se encuentra su pareja. Si aciertas, ambas cajas permanecerán boca arriba y ya no se podrá interactuar con ellas. Si fallas, las dos cajas volverán a su estado inicial. El programa debe detectar cuándo están todas las cajas emparejadas y cuánto tiempo has tardado en resolverlo.</p>
+
+    <div class="tabla">
+        <div class="box" data-index="0"></div>
+        <div class="box" data-index="1"></div>
+        <div class="box" data-index="2"></div>
+        <div class="box" data-index="3"></div>
+        <div class="box" data-index="4"></div>
+        <div class="box" data-index="5"></div>
+        <div class="box" data-index="6"></div>
+        <div class="box" data-index="7"></div>
+        <div class="box" data-index="8"></div>
+        <div class="box" data-index="9"></div>
+        <div class="box" data-index="10"></div>
+        <div class="box" data-index="11"></div>
+        <div class="box" data-index="12"></div>
+        <div class="box" data-index="13"></div>
+        <div class="box" data-index="14"></div>
+        <div class="box" data-index="15"></div>
+        <div class="box" data-index="16"></div>
+        <div class="box" data-index="17"></div>
+        <div class="box" data-index="18"></div>
+        <div class="box" data-index="19"></div>
+        <div class="box" data-index="20"></div>
+        <div class="box" data-index="21"></div>
+        <div class="box" data-index="22"></div>
+        <div class="box" data-index="23"></div>
+        <div class="box" data-index="24"></div>
+        <div class="box" data-index="25"></div>
+        <div class="box" data-index="26"></div>
+        <div class="box" data-index="27"></div>
+        <div class="box" data-index="28"></div>
+        <div class="box" data-index="29"></div>
+    </div>
+    
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+            const boxes = document.querySelectorAll('.box');
+            const colors = new Set();
+
+            // Generar 15 colores únicos
+            while (colors.size < 15) {
+                colors.add(getRandomColor());
+            }
+
+            // Duplicar cada color para formar pares
+            let colorArray = Array.from(colors);
+            colorArray = colorArray.flatMap(color => [color, color]);
+
+            // Mezclar los colores
+            colorArray.sort(() => Math.random() - 0.5);
+
+            // // Asignar los colores a los divs
+            // boxes.forEach((box, index) => {
+            //     box.style.backgroundColor = colorArray[index];
+            // });
+
+            // // Asignar los colores al clickar
+            // for (let box of boxes) {
+            //     box.addEventListener('click', (event)=> {
+            //         let boxIndex = event.target.dataset.index
+            //         event.target.style.backgroundColor = colorArray[boxIndex]
+            //     })
+            // }
+
+            // Estado del juego
+            let firstBox = null;
+            let secondBox = null;
+            let lock = false;
+            let matchedPairs = 0;
+            const totalPairs = 15;
+            const startTime = Date.now();
+
+            boxes.forEach((box, index) => {
+                box.addEventListener('click', function () {
+                    if (lock || box.classList.contains('matched') || box === firstBox) return;
+
+                    const color = colorArray[index];
+                    box.style.backgroundColor = color;
+
+                    if (!firstBox) {
+                        firstBox = box;
+                    } else {
+                        secondBox = box;
+                        lock = true;
+
+                        const color1 = colorArray[firstBox.dataset.index];
+                        const color2 = colorArray[secondBox.dataset.index];
+
+                        if (color1 === color2) {
+                            // ¡Coinciden!
+                            firstBox.classList.add('matched');
+                            secondBox.classList.add('matched');
+                            matchedPairs++;
+                            firstBox = null;
+                            secondBox = null;
+                            lock = false;
+
+                            if (matchedPairs === totalPairs) {
+                                const endTime = Date.now();
+                                const timeTaken = ((endTime - startTime) / 1000).toFixed(2);
+                                setTimeout(() => {
+                                    alert(`¡Ganaste! Tiempo: ${timeTaken} segundos.`);
+                                }, 300);
+                            }
+
+                        } else {
+                            // No coinciden → ocultar después de 1s
+                            setTimeout(() => {
+                                firstBox.style.backgroundColor = 'black';
+                                secondBox.style.backgroundColor = 'black';
+                                firstBox = null;
+                                secondBox = null;
+                                lock = false;
+                            }, 1000);
+                        }
+                    }
+                });
+            });
+
+    </script>
+</body>
+</html>

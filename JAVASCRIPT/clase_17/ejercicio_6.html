@@ -4,6 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>clase 17.6 JAVASCRIPT</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        padding: 2em;
+        line-height: 1.6;
+        background-color: #f5f5f5;
+        color: #333;
+        }
+        h2 {
+        color: #2a2a2a;
+        }
+        ul {
+        list-style-type: none;
+        padding-left: 1em;
+        }
+        ul li::before {
+        content: "• ";
+        color: #555;
+        }
+        strong {
+        font-weight: bold;
+        }
+        code {
+        background-color: #eaeaea;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+        }
+    </style>
     <script>
         // Ejercicio 6 - Billetera Virtual
         class BilleteraVirtual {
@@ -170,5 +199,42 @@
 <body>
     <h1>Ejercicio 6 - Clase 17 JAVASCRIPT</h1>
     <h2>Billetera Virtual</h2>
+    <h2>BilleteraVirtual</h2>
+    <h3>Propiedades</h3>
+    <ul>
+        <li><code>monto</code></li>
+        <li><code>operaciones</code> (array de objetos), inicializa vacío</li>
+    </ul>
+    <h3>Constructor</h3>
+    <ul>
+        <li>Toma como argumento <code>montoInicial</code> y lo asigna a <code>monto</code></li>
+    </ul>
+    <h3>Métodos</h3>
+    <ul>
+        <li><strong><code>agregarGasto(gasto)</code></strong>: agrega <code>gasto</code> a <code>operaciones</code></li>
+        <li><strong><code>agregarGanancia(ganancia)</code></strong>: agrega <code>ganancia</code> a <code>operaciones</code></li>
+        <li><strong><code>obtenerGastosPorMes(mes)</code></strong>: devuelve array de gastos del <code>mes</code></li>
+        <li><strong><code>obtenerGanaciasPorMes(mes)</code></strong>: devuelve array de ganancias del <code>mes</code></li>
+        <li><strong><code>obtenerGastosPorCategoria(categoria)</code></strong>: devuelve array de gastos de <code>categoria</code></li>
+        <li><strong><code>obtenerGanaciasPorCategoria(categoria)</code></strong>: devuelve array de ganancias de <code>categoria</code></li>
+        <li><strong><code>calcularTotalPorMes(mes)</code></strong>: calcula total neto de <code>mes</code></li>
+        <li><strong><code>calcularTotalPorCategoria(categoria)</code></strong>: calcula total neto por <code>categoria</code></li>
+        <li><strong><code>obtenerMonto()</code></strong>: devuelve <code>monto</code></li>
+    </ul>
+    <h3>Observaciones</h3>
+    <ul>
+        <li><code>gasto</code> y <code>ganancia</code> son objetos con:
+        <ul>
+            <li><code>descripcion</code> (string)</li>
+            <li><code>cantidad</code> (número)</li>
+            <li><code>fecha</code> (<code>Date</code>)</li>
+            <li><code>categoria</code> (string)</li>
+        </ul>
+        </li>
+        <li>Se debe agregar a cada operación la propiedad <code>tipo</code> con valor <code>"GASTO"</code> o <code>"GANANCIA"</code></li>
+        <li>Al devolver gastos o ganancias, eliminar la propiedad <code>tipo</code> de los objetos retornados</li>
+    </ul>
+    <iframe src="./JAVA-17-6.pdf" width="100%" height="800px" frameborder="0"></iframe>
+
 </body>
 </html>
