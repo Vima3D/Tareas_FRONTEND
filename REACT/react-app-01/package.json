@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://vima3d.github.io/Tareas_FRONTEND/REACT/react-app-01",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
