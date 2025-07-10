@@ -1,0 +1,49 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+a.button-1 {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-family: $title-font;
+    letter-spacing: 3.6px;
+    font-size: 20px;
+    font-weight: 800;
+    padding-left: 20px;
+    & div {
+        padding: 24px 30px;
+    }
+    & div:nth-of-type(1) {
+        background-color: black;
+    }
+    & div:nth-of-type(2) {
+        background-color: $gold;
+        background-image: url(../../img/mayor-que.svg);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+}
+
+a.button-2 {
+    padding: 14px 30px;
+    background-image: blue;
+    color: white;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+        background-image:  linear-gradient(
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 0.5) 100%);
+        }
+}
+
+a.button-3 {
+    padding: 14px 30px 14px 0px;
+    color: blue;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 07 CSS</title>
+    <link rel="stylesheet" href="../sytlesheet.css">
+
+</head>
+<style>
+
+  p > a:first-of-type {
+    color: blue;
+  }
+
+  form > input:checked + label{
+    color: red;
+  }
+
+  article p:last-of-type {
+    color: green;
+  }
+
+  section > :nth-child(2) {
+    color: rgb(143, 34, 26);
+  }
+
+  ol :nth-child(2n) {
+    color: red;
+  }
+
+  ul li:nth-last-of-type(3) {
+    color: violet;
+  }
+
+  p a:nth-of-type() {
+    color: yellow;
+  }
+
+  button:only-of-type {
+    color: red;
+  }
+
+  p > span:first-child {
+    color: red;
+  }
+
+  body >:nth-last-child(2) {
+    color: yellow;
+  }
+
+  
+</style>
+
+<body>
+  
+  <a class="index_button" href="../index.html">Index</a>
+  <h1>Tarea 2 de selectores</h1>
+  
+  <section>
+    <h2>CSS:</h2>
+    <pre> 
+      p > a:first-of-type {
+        color: blue;
+      }
+    
+      form > input:checked + label{
+        color: red;
+      }
+    
+      article p:last-of-type {
+        color: green;
+      }
+    
+      section > :nth-child(2) {
+        color: aquamarine;
+      }
+    
+      ol :nth-child(2n) {
+        color: red;
+      }
+    
+      ul li:nth-last-of-type(3) {
+        color: violet;
+      }
+    
+      p a:nth-of-type() {
+        color: yellow;
+      }
+    
+      button:only-of-type {
+        color: red;
+      }
+    
+      p > span:first-child {
+        color: red;
+      }
+    
+      body >:nth-last-child(2) {
+        color: yellow;
+      }
+    </pre>
+
+  </section>
+
+  <section>
+    <h3>Test:</h3>
+    Este texto no es un div hijo
+    <p>
+      Lorem <span>ipsum</span>, dolor sit amet consectetur adipisicing elit. Numquam assumenda quis pariatur praesentium consequuntur natus ex! <span>Deserunt</span> ab sunt, animi deleniti laboriosam libero modi odio molestiae minima ut, harum nisi?
+    </p>
+    <br>
+
+    <div>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam assumenda quis pariatur praesentium consequuntur natus ex! Deserunt ab sunt, animi deleniti laboriosam libero modi odio molestiae minima ut, harum nisi?
+    </div>
+    <br>
+
+    <form action="">
+      <strong>sexo:</strong> <br>
+      <input type="checkbox" name="sexo" value="hombre" id="hombre">
+      <label for="hombre">hombre</label>
+      <input type="checkbox" name="sexo" value="mujer" id="mujer">
+      <label for="mujer">mujer</label>
+      <button>enviar</button>
+      <button>submit</button>
+      <button>more</button>
+    </form>
+
+    <form action="">
+      <strong>sexo:</strong> <br>
+      <input type="radio" name="sexo" value="hombre" id="h">
+      <label for="h">hombre</label>
+      <input type="radio" name="sexo" value="mujer" id="m">
+      <label for="m">mujer</label>
+      <button>enviar</button>
+    </form>
+
+
+  </section>
+
+  <article>
+    <h2>arcticulo</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, 
+      aspernatur, non ad harum possimus cum debitis laborum maxime rem quibusdam ea vero expedita consequatur ipsam, incidunt beatae reiciendis sed corporis!</p>
+
+    <h3>Tom y Jerry</h3>
+    <p>Lorem, ipsum dolor sit amet <a href="">consectetur</a> adipisicing elit. Enim, magni, voluptatum quae fugit totam fugiat, ut <a href="">sequi nobis maiores</a> facere amet error praesentium tempore animi. Inventore temporibus quisquam ut magni.</p>
+  </article>
+
+  <p class="amarillo">Este es un <strong>parrafo</strong> hijo pero no div</p>
+
+  <p>Lista de otro parrafo:
+    <ul>
+      <li>uno</li>
+      <li>dos</li>
+      <li>tres</li>
+      <li>cuatro</li>
+      <li>cinco</li>
+      <li>seis</li>
+    </ul>
+  </p>
+
+
+  Otra lista:
+  <ol>
+    <li>uno</li>
+    <li>dos</li>
+    <li>tres</li>
+    <li>cuatro</li>
+    <li>cinco</li>
+    <li>seis</li>
+    <li>siete</li>
+    <li>ocho</li>
+    <li>nueve</li>
+    <li>diez</li>
+  </ol>  
+    
+  <section>
+    <h2>Segunda seccion</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, voluptatum repudiandae sapiente expedita consequuntur possimus quibusdam esse inventore quos, sunt culpa? Maiores, sequi? Nobis perspiciatis in laborum quaerat, officia quam.</p>
+  </section>
+
+  
+
+
+</body>
+</html>

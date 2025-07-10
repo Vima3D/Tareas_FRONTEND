@@ -1,0 +1,182 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+body >header {
+    margin-bottom: 70px;
+    padding: 0px 20px;
+    @include breakpoint(tablet) {
+        padding: 0px 40px;
+        margin-bottom: 0px;
+    }
+    @include breakpoint(desktop) {
+        padding: 0px 120px;
+    }
+
+}
+
+section.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.logo img {
+    @include breakpoint(desktop) {
+        width: 130%;
+    }
+}
+
+section.navbar ul {
+    @include reset-list();
+}
+
+section.navbar a {
+    text-decoration: none;
+}
+
+.hero .content {
+    @include breakpoint(tablet) {
+        padding: 80px 0px 0px;
+    }
+    @include breakpoint(desktop) {
+        padding: 100px 50px 0px 0px;
+    } 
+    @include breakpoint(desktopxl) {
+        padding: 150px 140px 0px 0px;
+    } 
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 800;
+    @include breakpoint(desktop) {
+        font-size: 52px;
+    }
+}
+
+.hero p {
+    color: $grey;
+    font-size: 16px;
+    margin-bottom: 30px;
+    @include breakpoint(desktop) {
+        font-size: 18px;
+    }
+}
+
+.hero {
+    @include breakpoint(tablet) {
+        display: grid;
+        grid-template-columns: 55% 45%;
+    }
+    @include breakpoint(desktop) {
+        grid-template-columns: 50% 50%;
+    }
+}
+
+.hero a {
+    margin-bottom: 20px;
+}
+
+.girl img {
+    display: block;
+    width: 80%;
+    margin: auto;
+    @include breakpoint(tablet) {
+        width: 150%; 
+        position: relative;
+        top: -80px;       
+    }
+    @include breakpoint(desktop) {
+        width: 120%; 
+        right: -60px;
+    }
+    @include breakpoint(desktopxl) {
+        width: 110%;
+        max-width: 650px;
+        top: -120px;
+        right: -100px;
+    }
+}
+
+div.picture {
+    position: relative;
+    @include breakpoint(tablet) {
+
+    }
+
+    & img:nth-of-type(1) {
+        @include breakpoint(tablet) {
+            display: none;
+        }
+    }
+
+    & img:nth-of-type(2) {
+        display: none;
+        @include breakpoint(tablet) {
+            display: block;
+        }
+    }
+}
+
+div.members, div.course-hours {
+    position: absolute;
+    @include white-cube();
+    @include breakpoint(desktopxl) {
+        padding: 20px 50px 20px 20px;
+    }
+    & span:first-of-type {
+        color: $grey;
+        font-weight: 700;
+        @include breakpoint(desktopxl) {
+            font-size: 18px;
+        }
+    }
+    & span:last-of-type {
+        color: black;
+        font-size: 32px;
+        font-weight: 800;
+        @include breakpoint(desktopxl) {
+            font-size: 40px;
+        }
+    }
+}
+
+div.members {
+    top: 0;
+    right: 0;
+    @include breakpoint(tablet) {
+        top: 20px;
+        right: -10px;        
+    }
+    @include breakpoint(desktop) {
+        top: 100px;
+        right: 20px;        
+    }
+    @include breakpoint(desktopxl) {
+        top: 200px;
+        right: -30px;        
+    }
+
+}
+
+div.course-hours {
+    bottom: 0;
+    @include breakpoint(tablet) {
+        bottom: 120px;   
+    }
+    @include breakpoint(desktop) {
+        bottom: 150px;
+        left: 70px;   
+    }
+    @include breakpoint(desktopxl) {
+        bottom: 300px;
+        left: 50px;       
+    }
+}
+
+
+
+

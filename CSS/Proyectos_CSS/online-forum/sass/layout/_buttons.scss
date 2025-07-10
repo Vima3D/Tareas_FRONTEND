@@ -1,0 +1,32 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+a.button-1 {
+    padding: 14px 80px;
+    color: white;
+    background-color: $light-red;
+    border-radius: 8px;
+    text-decoration: none;
+    border-bottom-left-radius: 0px;
+    display: inline-block;
+    margin-right: 20px;
+    &:hover {
+        background: linear-gradient(
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%),    
+    }
+}
+
+a.button-2 {
+    padding: 14px 20px;
+    color: white;
+    border-radius: 8px;
+    display: inline-block;
+    &:hover {
+        background: linear-gradient(
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0.5) 100%),    
+    }
+}
+
+

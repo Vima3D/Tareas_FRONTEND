@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 12.3 HTML</title>
+    <link rel="stylesheet" href="../../sytlesheet.css">
+</head>
+<body>
+    <a class="index_button" href="../../index.html">Index</a>
+    <header>
+        <h2>Rellena tu CV</h2>
+    </header>
+
+    <main>
+
+        <form action="" method="get">
+
+            <fieldset>
+                <legend>Datos personales</legend>
+                    <label for="pobla">Provincia:</label><br>
+                    <select name="poblacion" id="pobla" required>
+                        <option value="">-selecciona-</option>
+                        <option value="A">Almeria</option>
+                        <option value="G">Granada</option>
+                        <option value="S">Sevilla</option>
+                        <option value="Co">Córdoba</option>
+                        <option value="Ca">Cádiz</option>
+                        <option value="H">Huelva</option>
+                        <option value="M">Málaga</option>
+                    </select>
+
+                
+                <p>
+                    Fecha de Nacimiento<br>
+                    <input type="text" size="1" maxlength="2">
+                    de
+                    <select name="mes">
+                        <option value="1">Enero</option>
+                        <option value="2">Febrero</option>
+                        <option value="3">Marzo</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Mayo</option>
+                        <option value="6">Junio</option>
+                        <option value="7">Julio</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Septiembre</option>
+                        <option value="10">Octubre</option>
+                        <option value="11">Noviembre</option>
+                        <option value="12">Diciembre</option>
+                    </select>
+                    de
+                    <input type="text" size="2" maxlength="4">
+                </p>
+                
+                <p>
+                    <label for="temas">Temas de Interés:</label><br>
+                    <select name="temas" id="temas" multiple size="8">
+                        <option value="1">Administracion de bases de datos</option>
+                        <option value="2">Análisis y programación</option>
+                        <option value="3">Arquitectura</option>
+                        <option value="4">Calidad</option>
+                        <option value="5">ERP, CRM, Bussiness Intelligence</option>
+                        <option value="6">Técnico Informático</option>
+                        <option value="7">Web desiner</option>
+                        <option value="8">Front-end</option>
+                        <option value="9">Back-end</option>
+                        <option value="10">Archivista</option>
+                        <option value="11">Developer</option>
+                    </select>
+                </p>
+            </fieldset>
+            
+        </form>
+
+        
+    </main>
+    <hr>
+    <footer>
+        <cite>© Tareas HTML - Victor Escobar 2025</cite>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 30.1 JAVASCRIPT</title>
+    <style>
+        .contenedor img {
+            display: block;
+            width: 50%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicios de Eventos</h1>
+    <h2>Ejercicio 01</h2>
+    <p>Crea una página HTML con un contenedor de una imagen. Debes tener preparadas diez imágenes y en función de la tecla numérica que se pulse (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) debe aparecer esa imagen en el contenedor. Cuando se pulse otro número, debe vaciarse el contenedor y cargarse de nuevo su imagen correspondiente.</p>
+
+    <section class="contenedor">
+        <img src="https://fastly.picsum.photos/id/12/2500/1667.jpg?hmac=Pe3284luVre9ZqNzv1jMFpLihFI6lwq7TPgMSsNXw2w" alt="imagen">
+    </section>
+
+    <script>
+        let listaImagenes = [
+            'https://fastly.picsum.photos/id/12/2500/1667.jpg?hmac=Pe3284luVre9ZqNzv1jMFpLihFI6lwq7TPgMSsNXw2w',
+            'https://fastly.picsum.photos/id/7/4728/3168.jpg?hmac=c5B5tfYFM9blHHMhuu4UKmhnbZoJqrzNOP9xjkV4w3o',
+            'https://fastly.picsum.photos/id/11/2500/1667.jpg?hmac=xxjFJtAPgshYkysU_aqx2sZir-kIOjNR9vx0te7GycQ',
+            'https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I',
+            'https://fastly.picsum.photos/id/22/4434/3729.jpg?hmac=fjZdkSMZJNFgsoDh8Qo5zdA_nSGUAWvKLyyqmEt2xs0',
+            'https://fastly.picsum.photos/id/26/4209/2769.jpg?hmac=vcInmowFvPCyKGtV7Vfh7zWcA_Z0kStrPDW3ppP0iGI',
+            'https://fastly.picsum.photos/id/40/4106/2806.jpg?hmac=MY3ra98ut044LaWPEKwZowgydHZ_rZZUuOHrc3mL5mI',
+            'https://fastly.picsum.photos/id/55/4608/3072.jpg?hmac=ahGhylwdN52ULB37deeMZX6T_G7NiERtoPhwydMvUKQ',
+            'https://fastly.picsum.photos/id/69/4912/3264.jpg?hmac=Q08LW3SoOxPfaE-y8-braexxvm5PESXMCdEDqFbEhQ8',
+            'https://fastly.picsum.photos/id/90/3000/1992.jpg?hmac=v_xO0GFiGn3zpcKzWIsZ3WoSoxJuAEXukrYJUdo2S6g',
+        ];
+
+
+        let imagen = document.querySelector('img');
+        console.log(imagen.src)
+
+        document.body.addEventListener('keydown', (event)=>{
+            let key = parseInt(event.key);
+            if(key >= 0 && key <= 9){
+                imagen.src = listaImagenes[key];
+            }else {
+                console.log('Error. Tienes que pulsar un número entre 0 y 9');
+            }
+        });
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+a.button-1 {
+    padding: 14px 30px;
+    color: white;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 2.3px;
+    display: block;
+    width: max-content;
+    margin: auto;
+    position: relative;
+    text-decoration: none;
+    &::after {
+        content: "";
+        background-color: $green;
+        padding: 1px 60px;
+        position: absolute;
+        bottom: 0px;
+        left: 28px;
+    }
+    &:hover {
+        color: $green;
+    }
+}
+
+
+button {
+    padding: 14px 20px;
+    color: white;
+    font-weight: 700;
+    font-size: 16px;
+    display: block;
+    width: max-content;
+    position: relative;
+    text-decoration: none;
+    background-color: transparent;
+    border: 0;
+    &::after {
+        content: "";
+        background-color: $green;
+        padding: 1px 68px;
+        position: absolute;
+        bottom: 0px;
+        left: 16px;
+    }
+    &:hover {
+        color: $green;
+    }
+}
+
+
+a.button-2 {
+    padding: 14px 30px;
+    background-image: blue;
+    color: white;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+        background-image:  linear-gradient(
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 255, 255, 0.5) 100%);
+        }
+}
+
+a.button-3 {
+    padding: 14px 30px 14px 0px;
+    color: blue;
+    border-radius: 50px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+}

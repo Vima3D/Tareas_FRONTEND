@@ -1,0 +1,48 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 220px;
+    background-color: black;
+    font-weight: 550;
+    @include breakpoint(tablet) {
+        flex-flow: column;
+        gap: 20px;
+    }
+    figure {
+        margin: 0;
+        margin-top: 5px;
+        img {
+            @include breakpoint(tablet) {
+                width: 400px;
+            }
+        }
+    }
+    nav {
+        display: flex;
+        gap: 5px;
+        @include breakpoint(tablet) {
+                font-size: 40px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto auto auto;
+                text-align: center;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            background-color: black;
+            padding: 20px 30px;
+            border-radius: 8px;
+            &:hover{
+                background-color: white;
+                color: black;
+                transition: ease-in 0.3s;
+            }
+        }
+    }
+}
+

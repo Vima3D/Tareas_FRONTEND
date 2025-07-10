@@ -1,0 +1,82 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+main.contacto {
+    h1 {
+        text-align: center;
+        font-size: 64px;
+    }
+    section.ubicacion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        @include breakpoint(tablet) {
+            grid-template-columns: auto;
+            margin-bottom: 70px;
+        }
+        iframe {
+            margin-bottom: 20px;
+            @include breakpoint(tablet) {
+                margin: auto;
+            }
+        }
+        ul {
+            @include reset-list()
+        }
+    }
+    li {
+        margin-bottom: 20px;                
+        @include breakpoint(tablet) {
+            font-size: 50px;   
+        }
+        a {
+            color: gray;
+        }
+    }
+    span {
+        font-weight: 800;
+        font-size: 20px;
+        display: block;
+        @include breakpoint(tablet) {
+            font-size: 60px;
+        }
+    }
+
+
+    form {
+        width: 70%;
+        margin: auto;
+        fieldset {
+            text-align: center;
+            legend {
+                font-size: 34px;
+                font-weight: 800;
+                @include breakpoint(tablet) {
+                    font-size: 50px;
+                }
+            }
+            div.log {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+            label {
+                font-size: 24px;
+                @include breakpoint(tablet) {
+                    font-size: 40px;
+                }
+            }
+            input, textarea {
+                background-color: gray;
+                @include breakpoint(tablet) {
+                    font-size: 30px;
+                }
+                &:focus {
+                    border: 5px solid green;
+                }
+                &:invalid {
+                    border: 5px solid red;
+                }
+            }
+        }
+    }
+}

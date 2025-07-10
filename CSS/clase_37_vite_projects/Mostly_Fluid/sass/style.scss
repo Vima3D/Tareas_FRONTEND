@@ -1,0 +1,77 @@
+@import './abstracts/abstracts';
+@import './vendors/vendors';
+@import './base/base';
+@import './components/components';
+@import './layout/layout';
+@import './pages/pages';
+@import './themes/themes';
+@import 'settings';
+
+
+h1 {
+    text-align: center;
+    &::after {
+        content: ": Móbil";
+    }
+    @include breakpoint(tablet){
+        &::after {
+            content: ": Tablet";
+        }
+    }
+    @include breakpoint(tablet-horizontal){
+        &::after {
+            content: ": Tablet Horizontal";
+        }
+    }
+    @include breakpoint(desktop){
+        &::after {
+            content: ": Desktop";
+        }
+    }
+    @include breakpoint(desktop-xl){
+        &::after {
+            content: ": Desktop-XL";
+        }
+    }
+}
+
+
+div.caja-1 {
+    background-color: #E44927;
+}
+
+div.caja-2 {
+    background-color: #FB6F50;
+}
+
+div.caja-3 {
+    background-color: #FDB9AA;
+}
+
+
+div.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, 700px);
+    text-align: center;
+    font-weight: bold;
+    
+    @include breakpoint(tablet){
+        grid-template-columns: auto auto;
+        grid-template-rows: 200px 500px;
+
+        div.caja-1 {
+            grid-column: 1 / span 2;
+        }
+    }
+    
+    @include breakpoint(tablet-horizontal){
+        width: 1100px;
+        margin: auto;
+    }
+    
+    @include breakpoint(desktop){
+        max-width: 1200px;
+    }
+}
+

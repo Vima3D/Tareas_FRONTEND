@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 6.4 JAVASCRIPT</title>
+    <script>
+        let usuario = 'usuario';
+        let contrasena = 'contraseña';
+        let pedirUsuario = prompt('Introduzca Usuario');
+        let pedirContrasena = prompt('Introduzca Contraseña');
+
+        if (pedirUsuario == usuario && pedirContrasena == contrasena) {
+            console.log('Usuario y Contraseña correctos. Acceso Permitido')
+        }
+        else{
+            console.log('Usuario o Contraseña incorrecto. Acceso Denegado')
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        Autenticación
+    </h1>
+    <p>
+        Crear un programa que pida ingresar el usuario y la contraseña y los compare con el usuario y contraseña guardados en variables, y muestre en un mensaje si tiene el acceso autorizado
+    </p>
+</body>
+</html>

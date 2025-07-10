@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+}
+
+.index h1 {
+    text-align: center;
+    font-size: xx-large;
+}
+
+.index ul, .index ol {
+    font-size: large;
+    margin-left: 20px;
+}
+
+.index a, .index li {
+    padding: 10px 0px;
+}
+
+.index a:hover {
+    background-color: rgb(195, 195, 195);
+    color: rgb(0, 0, 0);
+}
+
+/*--------Index Button--------*/
+.index_button {
+    font-size: large;
+    padding: 10px 30px;
+    background-color: gainsboro;
+    border: 2px solid black;
+    font-weight: bold;
+}
+
+.index_button:hover {
+    background-color: gray;
+    color: black;
+}
+/*--------------------------*/
+
+section.principal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.HTML {
+    background-color: aquamarine;
+}
+
+.CSS {
+    background-color: bisque;
+}
+
+.JAVA {
+    background-color: burlywood;
+}
+
+.ReactJS {
+    background-color: violet;
+}
+
+/*---------------------------------------*/
+
+ul.grid1 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto;
+}
+
+ul.grid2 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+}
+
+ul.grid3 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    padding-left: 20px;
+}
+
+ul.grid4 {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+    padding-left: 20px;
+}
+
+ul.grid5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: 0;
+}
+
+ul.grid5 li {
+    max-width: 90%;
+}

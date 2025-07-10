@@ -1,0 +1,269 @@
+.button {
+    border: 5px, solid, blue;
+    background-color: aquamarine;
+    font-weight: bold;
+    font-size: x-large;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.container {
+    background-color: rgb(181, 181, 181);
+    position: relative;
+    height: 450px;
+}
+
+.rojo {
+    background-color: red;
+    font-weight: bold;
+    font-size: xxx-large;
+}
+
+.azul {
+    background-color: blue;
+    font-weight: bold;
+    font-size: xxx-large;
+}
+
+.verde {
+    background-color: green;
+    font-weight: bold;
+    font-size: xxx-large;
+}
+
+.amarillo {
+    background-color: yellow;
+    font-weight: bold;
+    font-size: xxx-large;
+}
+
+.ejercicio1.rojo {
+    width: 40%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.ejercicio1.azul {
+    width: 40%;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.ejercicio1.verde {
+    width: 40%;
+    height: 150px;
+    position: absolute;
+    bottom: 10px;
+}
+
+.ejercicio1.amarillo {
+    width: 40%;
+    height: 150px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.ejercicio2.rojo {
+    width: 100px;
+    height: 100px;
+}
+
+.ejercicio2.azul {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
+.ejercicio2.verde {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+
+.ejercicio2.amarillo {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.ejercicio3.azul {
+    width: 60%;
+    height: 240px;
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    z-index: 1;
+}
+
+.ejercicio3.verde {
+    width: 35%;
+    height: 200px;
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    z-index: 2;
+}
+
+.ejercicio3.amarillo {
+    width: 35%;
+    height: 220px;
+    position: absolute;
+    right: 80px;
+    top: 80px;
+    z-index: 2;
+}
+
+.ejercicio3.rojo {
+    width: 50%;
+    height: 150px;
+    position: absolute;
+    bottom: 30px;
+    left: 200px;
+    z-index: 3;
+}
+
+.espacios {
+    font-size: 0;
+    padding-left: 100px;
+}
+
+.ejercicio4.verde {
+    width: 20%;
+    height: 350px;
+    display: inline-block;
+    margin-top: 60px;
+}
+
+.ejercicio4.amarillo {
+    width: 20%;
+    height: 350px;
+    display: inline-block;
+}
+.ejercicio4.rojo {
+    width: 20%;
+    height: 350px;
+    display: inline-block;
+}
+.ejercicio4.azul {
+    width: 20%;
+    height: 350px;
+    display: inline-block;
+}
+
+.ejercicio5.amarillo {
+    width: 80%;
+    height: 100px;
+    position: absolute;
+    bottom: 60px;
+    left: 80px;
+}
+
+.ejercicio5.rojo {
+    width: 80%;
+    height: 100px;
+    position: absolute;
+    top: 60px;
+    left: 80px;
+}
+
+.ejercicio5.azul {
+    width: 18%;
+    height: 400px;
+    position: absolute;
+    top: 25px;
+    left: 180px;
+}
+
+.ejercicio5.verde {
+    width: 18%;
+    height: 400px;
+    position: absolute;
+    top: 25px;
+    right: 180px;
+}
+
+.ejercicio6 div {
+    border: 2px, solid, black;
+    width: 120px;
+    height: 500px;
+    margin-right: 10px;
+}
+
+.ejercicio6 {
+    display: flex;
+    justify-content: center;
+}
+
+h1.siete, body p, footer.siete, aside, main {
+    border: 2px, solid, black;
+}
+
+h1.siete {
+    padding: 15px;
+}
+
+body p {
+    padding: 10px;
+    height: 550px;
+}
+
+footer {
+    padding: 10px;
+    height: 50px;
+}
+
+aside {
+    padding: 20px;
+    width: 35%;
+    height: 600px;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 20px;
+    width: 60%;
+    height: 400px;
+    margin-left: 10px;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+.ejercicio9 {
+    position: relative;
+}
+
+div.logo, div.topmenu, div.menu {
+    border: 2px, solid, black;
+}
+
+div.logo {
+    width: 40%;
+    height: 80px;
+}
+
+div.topmenu {
+    width: 20%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+
+div.menu {
+    width: 60%;
+    padding: 2px;
+    float: right;
+    margin-top: 20px;
+}
+

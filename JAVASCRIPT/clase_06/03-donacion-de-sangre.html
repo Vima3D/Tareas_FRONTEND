@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 6.3 JAVASCRIPT</title>
+    <script>
+        let tatuajes = prompt('¿Tienes tatuajes? si/no');
+        while (tatuajes!='si'&&tatuajes!='no'){
+            tatuajes = prompt('No introdusiste una respuesta válida ¿Tienes tatuajes? si/no');
+        }
+
+        let hepatitis = prompt('¿Tienes o has tenido hepatitis? si/no');
+        while (hepatitis!='si'&&hepatitis!='no'){
+            hepatitis = prompt('No introdusiste una respuesta válida ¿Tienes o has tenido hepatitis? si/no');
+        }
+
+        let anemia = prompt('¿Tienes o has tenido anemia? si/no');
+        while (anemia!='si'&&anemia!='no'){
+            anemia = prompt('No introdusiste una respuesta válida ¿Tienes o has tenido anemia? si/no');
+        }
+
+        if(tatuajes == 'si' || hepatitis == 'si' || anemia == 'si'){
+            console.log('No puedes donar sangre')
+        }
+        else{
+            console.log('Puedes donar sangre')
+        }
+    </script>
+</head>
+<body>
+    <h1>
+        Donación de sangre
+    </h1>
+    <p>
+        Crear un programa que realice al usuario 3 preguntas: si se ha hecho tatuajes recientemente, si ha tenido o tiene hepatitis, si tiene anemia. Si responde a alguna de ellas afirmativamente, debe mostrar un mensaje que indique si puede o no donar sangre
+    </p>
+</body>
+</html>

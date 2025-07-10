@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 14 CSS</title>
+    <link rel="stylesheet" href="../sytlesheet.css">
+
+</head>
+
+<style>
+
+    body > p:first-of-type {
+        width: 250px;
+        height: 200px;
+        border: 5px solid red; 
+        background-color: #999;
+        padding: 10px;
+        margin: 25px;
+        box-sizing: border-box;
+    }
+
+    body > p:nth-of-type(2) {
+        width: 300px;
+        height: 200px;
+        box-sizing: border-box;
+        border: 7px, solid, green;
+        background-color: gray;
+        color: white;
+        padding: 5px;
+        margin: 0px;
+    }
+
+    div.caja {
+        margin: 25px 0px;
+        border: 5px, solid, red,;
+    }
+
+    div.caja p:first-of-type {
+        border: solid, green, 5px;
+        width: 50%;
+        margin: 10px;
+        box-sizing: border-box;
+    }
+
+    div.caja p:nth-of-type(2) {
+        border: solid, blue, 5px;
+        width: 50%;
+        margin-top: 10px;
+        margin-left: 50px;
+        box-sizing: border-box;
+    }
+    
+    div.caja p:last-of-type {
+        border: solid, orange, 5px;
+        width: 50%;
+        margin-top: 10px;
+        margin-left: 100px;
+        box-sizing: border-box;
+    }
+
+    body > p:nth-of-type(3) {
+        border: red, 5px, solid;
+        padding: 0px;
+        margin: 5px 0px ;
+    }
+
+    body > p:nth-of-type(4) {
+        border: blue, 5px, solid;
+        padding: 25px;
+        margin: 5px 0px ;
+    }
+
+    body > p:nth-of-type(5) {
+        border: green, 5px, solid;
+        padding: 50px;
+        margin: 5px 0px ;
+    }
+
+    body > p:nth-of-type(6) {
+        border-top-style: dotted;
+        border-top-width: 5px;
+        border-top-color: green;
+        border-bottom: dotted;
+        border-bottom-width: 5px;
+        border-bottom-color: red;
+        border-left-style: dashed;
+        border-left-width: 5px;
+        border-left-color: blue;
+        border-right-style: dashed;
+        border-right-width: 5px;
+        border-right-color: orange;
+        text-align: center;
+        padding: 20px;
+        margin: 5px 0px;
+    }
+    
+    body > p:nth-of-type(7) {
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: aqua;
+        border-bottom: solid;
+        border-bottom-width: 5px;
+        border-bottom-color: pink;
+        border-left-style: solid;
+        border-left-width: 5px;
+        border-left-color: black;
+        border-right-style: solid;
+        border-right-width: 5px;
+        border-right-color: black;
+        text-align: center;
+        padding: 20px;
+        margin: 5px 0px;
+    }
+    
+    div.caja-diferente {
+        border-top-style: dotted;
+        border-top-width: 5px;
+        border-top-color: green;
+        border-bottom: dotted;
+        border-bottom-width: 5px;
+        border-bottom-color: red;
+        border-left-style: dashed;
+        border-left-width: 5px;
+        border-left-color: blue;
+        border-right-style: dashed;
+        border-right-width: 5px;
+        border-right-color: orange;
+        text-align: center;
+        padding: 30px;
+        margin: 5px 0px;
+    }
+    
+    div.caja-diferente p {
+        border-top-style: solid;
+        border-top-width: 5px;
+        border-top-color: aqua;
+        border-bottom: solid;
+        border-bottom-width: 5px;
+        border-bottom-color: pink;
+        border-left-style: solid;
+        border-left-width: 5px;
+        border-left-color: black;
+        border-right-style: solid;
+        border-right-width: 5px;
+        border-right-color: black;
+        text-align: center;
+        padding: 10px;
+        margin: 5px 0px;
+    }
+
+    div.cajass {
+        border: 5px, solid, black;
+        margin: 10px;
+        text-align: center;
+    }
+
+</style>
+
+<body>
+
+    <a class="index_button" href="../index.html">Index</a>
+    <p>Esta es una caja de 250x200px con un borde rojo de 5px y un fondo gris claro, un relleno de 10px y un margen de 25px</p>
+
+    <p>Esta es una caja de 300x200px con un borde verde de 7px, fondo gris, color de texto blanco, relleno de 5px y margen de 0px</p>
+
+    <div class="caja">
+        <p>Esta es una caja con 50% de ancho y 10px desde la parte superior e izquierda dentro de un contenedor</p>
+        <p>Esta es una caja con 50% de ancho y 10px desde la parte superior y 50px a la izquierda dentro de un contenedor</p>
+        <p>Esta es una caja con 50% de ancho y 10px desde la parte superior y 100px a la izquierda dentro de un contenedor</p>
+    </div>
+
+    <p>Esta es una caja sin relleno</p>
+
+    <p>Esta es una caja con 25px de relleno</p>
+
+    <p>Esta es una caja con 50px de relleno</p>
+
+    <p>Esta es una caja con diferentes tipos de bordes</p>
+
+    <p>Esta es otra caja con diferentes tipos de bordes</p>
+
+    <div class="caja-diferente">
+        <p>Esta es una caja con diferentes tipos de bordes dentro de otra caja</p>
+    </div>
+
+    <div class="cajass">
+        <div class="cajass">
+            <div class="cajass">
+                <div class="cajass">
+                    <div class="cajass">
+                        <div class="cajass">
+                            <p>Estas son cajas dentro de cajas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

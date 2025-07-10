@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 6.13 JAVASCRIPT</title>
+    <script>
+        let objeto_01 = Number(prompt('¿Del 1 al 10 cuanto te gusta ir a la playa?'))
+        while (!(objeto_01 > 0 && objeto_01 < 10)){
+            objeto_01 = prompt('No introdusiste una respuesta válida ¿Del 1 al 10 cuanto te gusta ir a la playa?');
+        }
+        if (objeto_01>6){
+            console.log('Parece que disfrutas ir a la playa :)')
+        }else if (objeto_01<4){
+            console.log('Parece que no disfrutas mucho ir a la playa')
+        }else{
+            console.log('Parece que ir a la playa es un plan okay para ti')
+        }
+        
+        let objeto_02 = Number(prompt('¿Del 1 al 10 cuanto te gustan los video juegos?'))
+        while (!(objeto_02 > 0 && objeto_02 < 10)){
+            objeto_02 = prompt('No introdusiste una respuesta válida ¿Del 1 al 10 cuanto te gustan los video juegos?');
+        }
+        if (objeto_02>6){
+            console.log('Parece que disfrutas mucho los video juegos :)')
+        }else if (objeto_02<4){
+            console.log('Parece que prefieres hacer otras cosas que estar con los video juegos')
+        }else{
+            console.log('Parece que de vez en cuando juegas algún video juego')
+        }
+
+        let objeto_03 = Number(prompt('¿Del 1 al 10 cuanto te gustan los SPAs?'))
+        while (!(objeto_03 > 0 && objeto_03 < 10)){
+            objeto_03 = prompt('No introdusiste una respuesta válida ¿Del 1 al 10 cuanto te gustan los video juegos?');
+        }
+        if (objeto_03>6){
+            console.log('Parece que disfrutas mucho los SPAs')
+        }else if (objeto_03<4){
+            console.log('Parece que los SPAs no te matan')
+        }else{
+            console.log('Parece que los SPAs es algo okay para ti')
+        }
+
+        let objeto_04 = Number(prompt('¿Del 1 al 10 cuanto te gusta el fútbol'))
+        while (!(objeto_04 > 0 && objeto_04 < 10)){
+            objeto_04 = prompt('No introdusiste una respuesta válida ¿Del 1 al 10 cuanto te gustan los video juegos?');
+        }
+        if (objeto_04>6){
+            console.log('Parece que te gusta mucho el fútbol')
+        }else if (objeto_04<4){
+            console.log('Parece que no te gusta demasiado el fútbol')
+        }else{
+            console.log('Parece que de vez en cuando ves fútbol anque no eres super aficionado')
+        }
+
+    </script>
+</head>
+<body>
+    <h1>
+        Juez de gusto
+    </h1>
+    <p>
+        Crear un programa que pida al usuario evaluar del 1 al 10 cuánto le gusta X cosa (a elección). Dependiendo de la respuesta, debe mostrar un mensaje en consonancia. Hacer mínimo 4 casos posibles. Si se ingresa algo que no sea un número del 1 al 10, mostrar un mensaje de advertencia y volver a pedir dicho número.
+    </p>
+</body>
+</html>

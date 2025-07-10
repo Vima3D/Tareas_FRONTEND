@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clase 17.2 JAVASCRIPT</title>
+    <style>
+        body {
+        font-family: Arial, sans-serif;
+        padding: 2em;
+        line-height: 1.6;
+        background-color: #f5f5f5;
+        color: #333;
+        }
+        h2 {
+        color: #2a2a2a;
+        }
+        ul {
+        list-style-type: none;
+        padding-left: 1em;
+        }
+        ul li::before {
+        content: "• ";
+        color: #555;
+        }
+        strong {
+        font-weight: bold;
+        }
+        code {
+        background-color: #eaeaea;
+        padding: 2px 6px;
+        border-radius: 4px;
+        font-family: monospace;
+        }
+    </style>
+    <script>
+        // Ejercicio 2 - Auto
+        
+        class Auto {
+            //propiedades
+            #encendido
+            #velocidad
+            #marca
+            #modelo
+            #patente
+
+            //constructor
+            constructor(marca, modelo, patente) {
+                this.#marca = marca
+                this.#modelo = modelo
+                this.#patente = patente
+                this.#velocidad = 0
+                this.#encendido = false
+            }
+
+            //métodos
+            arrancar() {
+                this.#encendido = true;
+            }
+
+            apagar() {
+                try {
+                    if (this.#velocidad != 0) {
+                        throw Error('No se puede apagar el coche en movimiento')
+                    } else {
+                        this.encendido = false;
+                    }
+                } catch (err) {
+                    console.error(err.message)
+                }
+            }
+
+            acelerar() {
+                try {
+                    if (this.#encendido == false) {
+                        throw Error('No se puede acelerar estando apagado')
+                    } else {
+                        this.#velocidad += 10
+                    }
+                } catch (err) {
+                    console.error(err.message)
+                }
+            }
+
+            desacelerar() {
+                try {
+                    if (this.#encendido == false) {
+                        throw Error('No se puede desacelerar si el coche esta apagado')
+                    } else {
+                        this.#velocidad -= 10
+                    }
+                } catch (err) {
+                    console.error(err.message)
+                }
+            }
+
+            toString() {
+                return console.log(`${this.#marca} ${this.#modelo}, patente ${this.#patente}`)
+            }
+
+            velocidad() {
+                return console.log(`La velocidad actual es: ${this.#velocidad} km/h`)
+            }
+        }
+
+        // Prueba de ejecución
+
+        let auto_1 = new Auto('Dacia', 'Logan', 'Diesel');
+
+        auto_1.acelerar();
+        auto_1.toString();
+        auto_1.arrancar();
+        auto_1.acelerar();
+        auto_1.velocidad();
+        auto_1.desacelerar();
+        auto_1.velocidad();
+
+    </script>
+</head>
+<body>
+    <h1>Ejercicio 2 - Clase 17 JAVASCRIPT</h1>
+    <h2>Auto</h2>
+    <h3>Propiedades</h3>
+    <ul>
+        <li><code>encendido</code> (booleano), inicializa en <code>false</code></li>
+        <li><code>velocidad</code> (número), inicializa en 0</li>
+        <li><code>marca</code> (string)</li>
+        <li><code>modelo</code> (número)</li>
+        <li><code>patente</code> (string)</li>
+    </ul>
+    <h3>Constructor</h3>
+    <ul>
+        <li>Pide como argumentos <code>marca</code>, <code>modelo</code> y <code>patente</code> y los asigna a sus propiedades</li>
+    </ul>
+    <h3>Métodos</h3>
+    <ul>
+        <li><strong><code>arrancar()</code></strong>: pone <code>encendido</code> en <code>true</code></li>
+        <li><strong><code>apagar()</code></strong>: pone <code>encendido</code> en <code>false</code></li>
+        <li><strong><code>acelerar()</code></strong>: suma 10 a <code>velocidad</code></li>
+        <li><strong><code>desacelerar()</code></strong>: resta 10 a <code>velocidad</code></li>
+        <li><strong><code>toString()</code></strong>: devuelve <code>${marca} ${modelo}, patente ${patente}</code></li>
+    </ul>
+    <h3>Observaciones</h3>
+    <ul>
+        <li>Sólo se puede acelerar o desacelerar si el auto está encendido</li>
+        <li>Sólo se puede apagar si la velocidad es 0</li>
+        <li>La velocidad mínima es 0</li>
+    </ul>
+    <iframe src="./JAVA-17-2.pdf" width="100%" height="800px" frameborder="0"></iframe>
+
+</body>
+</html>

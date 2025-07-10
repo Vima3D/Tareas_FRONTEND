@@ -1,0 +1,64 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+
+section.courses {
+
+    margin-bottom: 100px;
+    display: grid;
+    grid-template-columns: auto;
+    gap: 40px;
+    @include breakpoint(tablet) {
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 120px;
+    }
+    @include breakpoint(desktop) {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 140px;
+    }
+
+
+    & .header-courses {
+        background-image: $gradient-orange-pink;
+        padding: 30px 40px 40px;
+        border-radius: 30px;
+        color: white;
+        font-size: 24px;
+        font-weight: 800;
+        @include breakpoint(tablet) {
+            padding: 50px 40px 150px;
+        }
+    }
+
+
+    & article {
+        background-color: white;
+        padding: 28px;
+        position: relative;
+
+        & div {
+            background-image: $gradient-orange-pink;
+            display: inline-block;
+            padding: 15px;
+            border-radius: 100%;
+            position: absolute;
+            top: -25px;
+            & img {
+                width: 25px;
+            }
+        }
+
+        & h2 {
+            font-size: 24px;
+            font-weight: 800;
+        }
+
+        & p {
+            font-size: 16px;
+            font-weight: 500;
+            color: $grey;
+        }
+
+    }
+
+}
