@@ -1,115 +1,114 @@
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 .index h1 {
-    font-size: xxx-large;
+  font-size: xxx-large;
 }
 
 .index ul {
-    font-size: xx-large;
-    margin-left: 20px;
+  font-size: xx-large;
+  margin-left: 20px;
 }
 
-.index a, .index li {
-    padding: 10px 0px;
+.index a,
+.index li {
+  padding: 10px 0px;
 }
 
 .index a:hover {
-    background-color: rgb(195, 195, 195);
-    color: rgb(0, 0, 0);
+  background-color: rgb(195, 195, 195);
+  color: rgb(0, 0, 0);
 }
 
 footer {
-    margin: 20px 0px;
+  margin: 20px 0px;
 }
 
 footer a {
-    font-size: xx-large;
-    padding: 10px;
-    background-color: gainsboro;
-    border: 2px solid black;
-    font-weight: bold;
-    float: right;
+  font-size: xx-large;
+  padding: 10px;
+  background-color: gainsboro;
+  border: 2px solid black;
+  font-weight: bold;
+  float: right;
 }
 
 footer a:hover {
-    background-color: gray;
-    color: black;
+  background-color: gray;
+  color: black;
 }
-
 
 /*---------Ejercicio 1---------*/
 
 .tabla {
-    display: grid;
-    grid-template-columns: repeat(10, auto);
-    gap: 10px;
-    font-size: x-large;
-    font-weight: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-image: url(topography.svg),
-    linear-gradient(to right, #DA4E72, #7949C3);
-    padding: 10px;
-    max-width: 1000px;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  gap: 10px;
+  font-size: x-large;
+  font-weight: bold;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url(topography.svg),
+    linear-gradient(to right, #da4e72, #7949c3);
+  padding: 10px;
+  max-width: 1000px;
+  margin: auto;
 }
 
-
 [class^="box-"] {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #F6C844;
-    border: 4px solid rgb(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6c844;
+  border: 4px solid rgb(0, 0, 0, 0.2);
 }
 
 .box-6 {
-    background-color: #6F94E6;
-    grid-area: 2 / 1 / span 1 / span 6;
+  background-color: #6f94e6;
+  grid-area: 2 / 1 / span 1 / span 6;
 }
 
 .box-8 {
-    background-color: #ED6D52;
-    grid-column: span 2;
+  background-color: #ed6d52;
+  grid-column: span 2;
 }
 
 .box-9 {
-    background-color: #AFF8A2;
-    grid-row: span 2;
+  background-color: #aff8a2;
+  grid-row: span 2;
 }
 
 .box-12 {
-    background-color: #6F94E6;
-    grid-area: 3 / 1 / span 1 / span 6;
+  background-color: #6f94e6;
+  grid-area: 3 / 1 / span 1 / span 6;
 }
 
 .box-16 {
-    background-color: #ED6D52;
-    grid-column: span 2;
+  background-color: #ed6d52;
+  grid-column: span 2;
 }
 
 .box-18 {
-    background-color: #A5CC4F;
-    grid-area: 4 / 5 / span 2 / span 6;
+  background-color: #a5cc4f;
+  grid-area: 4 / 5 / span 2 / span 6;
 }
 
 .box-24 {
-    background-color: #ED6D52;
-    grid-area: 5 / 2 / span 1 / span 2;
+  background-color: #ed6d52;
+  grid-area: 5 / 2 / span 1 / span 2;
 }
 
 .box-27 {
-    background-color: #AFF8A2;
-    grid-area: 6 / 2 / span 2 / span 1;
+  background-color: #aff8a2;
+  grid-area: 6 / 2 / span 2 / span 1;
 }
 
 .box-30 {
-    background-color: #6F94E6;
-    grid-column: span 6;
+  background-color: #6f94e6;
+  grid-column: span 6;
 }
 
 .box-32 {
-    background-color: #ED6D52;
-    grid-column: span 2;
+  background-color: #ed6d52;
+  grid-column: span 2;
 }
