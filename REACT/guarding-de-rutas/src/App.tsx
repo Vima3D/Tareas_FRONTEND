@@ -1,5 +1,10 @@
 // App.tsx
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import { AuthProvider } from "./context/AuthProvider";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
@@ -15,7 +20,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
-            <Route path="*" element={<Home />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
             <Route
               path="/dashboard"
               element={
