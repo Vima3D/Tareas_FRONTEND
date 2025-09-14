@@ -107,7 +107,6 @@ if 'df_fil' not in st.session_state:
 
 st.header('Titanic passenger data')
 
-data_titanic = 'train.csv'
 st.session_state['df'] = get_data(data_titanic)
 
 
