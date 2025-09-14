@@ -7,6 +7,7 @@ import plotly.express as px
 # Ruta al archivo CSV
 BASE_DIR = os.path.dirname(__file__)
 data_titanic = os.path.join(BASE_DIR, "train.csv")
+desc_path = os.path.join(BASE_DIR, "titanic_table_description.html")
 
 def clean_data(df):
     
@@ -112,10 +113,12 @@ st.session_state['df'] = get_data(data_titanic)
 
 def page_1():
     st.subheader('🚢 Data description')
-    st.markdown(
-        open('./titanic_table_description.html').read(),
-        unsafe_allow_html=True,
-    )
+    if os.path.exists(desc_path):
+        with open(desc_path, "r", encoding="utf-8") as f:
+            st.markdown(f.read(), unsafe_allow_html=True)
+    else:
+        st.warning("⚠️ No se encontró el archivo titanic_table_description.html")
+        
     with st.expander('Dataframe'):
         st.write(st.session_state['df'])
 
