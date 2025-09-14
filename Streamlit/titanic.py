@@ -1,7 +1,12 @@
+import os
 import streamlit as st
 import pandas as pd
 import copy
 import plotly.express as px
+
+# Ruta al archivo CSV
+BASE_DIR = os.path.dirname(__file__)
+data_titanic = os.path.join(BASE_DIR, "train.csv")
 
 def clean_data(df):
     
